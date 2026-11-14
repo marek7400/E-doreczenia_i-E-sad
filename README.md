@@ -1,7 +1,7 @@
 
-## e-Doręczenia i e-Sąd — poradnik 
+# e-Doręczenia i e-Sąd — poradnik 
 
-# adres strony: https://marek7400.github.io/E-doreczenia_i-E-sad/
+## adres strony: https://marek7400.github.io/E-doreczenia_i-E-sad/
 
 ### 
 
