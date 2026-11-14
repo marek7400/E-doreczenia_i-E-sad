@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>e-Doręczenia i e-Sąd — poradnik (V25)</title>
+<style>
+  :root{--navy:#0f2a44;--teal:#0e7a6b;--light:#f4f7f9;--amber:#fff7e0;--green:#e8f6ee;--red:#fdecec;--grey:#6b7a8a;--border:#dce5ee}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:110px}
+  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0;background:#eef2f5;color:#1c2b3a;line-height:1.75;font-size:18px}
+  header{background:#0f2a44;color:#fff;padding:36px 20px 28px}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 18px}
+  header h1{margin:0 0 8px;font-size:34px;line-height:1.25}
+  header p{margin:6px 0;opacity:.93}
+  .pill{display:inline-block;background:#fff;color:#0f2a44;border-radius:999px;padding:5px 12px;font-weight:700;font-size:13px;margin:4px 6px 0 0}
+  .pill.teal{background:#c9f0e8}
+  nav{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:5}
+  nav .wrap{display:flex;flex-wrap:wrap;gap:8px;padding:12px 18px}
+  nav a{font-size:14px;font-weight:600;color:#0f2a44;text-decoration:none;background:var(--light);padding:7px 10px;border-radius:999px}
+  nav a:hover{background:#e0eef0}
+  main{padding:22px 0 40px}
+  section{background:#fff;border:1px solid var(--border);border-radius:16px;padding:22px;margin:0 0 18px;scroll-margin-top:110px}
+  h2{margin:0 0 12px;font-size:24px;color:#0f2a44;border-bottom:3px solid #e8f0f5;padding-bottom:8px;scroll-margin-top:110px}
+  h3{margin:22px 0 8px;font-size:19px;color:#0f2a44;scroll-margin-top:110px}
+  p{margin:8px 0} ul,ol{margin:8px 0 8px 20px;padding:0} li{margin:6px 0}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:16px}
+  th{background:#0f2a44;color:#fff;text-align:left;padding:10px 12px}
+  td{padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+  tr:nth-child(even) td{background:#f9fbfc}
+  .badge{display:inline-block;border-radius:999px;padding:3px 9px;font-size:12px;font-weight:800;white-space:nowrap}
+  .ok{background:#d9f2e2;color:#0a6b35}.warn{background:#fff0c2;color:#7a5200}.bad{background:#ffd9d9;color:#8a1414}.plus{background:#d9eaff;color:#0b4a8a}.new{background:#e6d9ff;color:#4a1a8a}
+  .box{border-radius:12px;padding:14px 16px;margin:14px 0}
+  .box.red{background:#fdecec;border:1px solid #f5b5b5}.box.green{background:#e8f6ee;border:1px solid #a8dcc0}.box.amber{background:#fff7e0;border:1px solid #f0d48a}.box.blue{background:#eef6ff;border:1px solid #bcd8f5}.box.purple{background:#f3efff;border:1px solid #c9b8f5}
+  .box h4{margin:0 0 6px}
+  .box.red h3{color:#8a1414}
+  mark.hl{background:#ffe97a;color:#1c2b3a;padding:2px 7px;border-radius:6px;font-weight:800;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:640px){.grid{grid-template-columns:1fr} header h1{font-size:27px} table{font-size:15px} body{font-size:17px}}
+  .kpi{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0}
+  .kpi div{flex:1;min-width:170px;background:var(--light);border:1px solid var(--border);border-radius:12px;padding:12px}
+  .kpi b{font-size:20px;display:block;color:#0f2a44}
+  .small{font-size:15px;color:#4a5a6a}
+  .step li{list-style:none;position:relative;padding-left:34px;margin:10px 0}
+  .step{counter-reset:step}
+  .step li:before{counter-increment:step;content:counter(step);position:absolute;left:0;top:0;width:26px;height:26px;border-radius:50%;background:#0e7a6b;color:#fff;text-align:center;font-weight:800;line-height:26px;font-size:13px}
+  code{background:#eef2f5;padding:2px 6px;border-radius:6px}
+  a{color:#0b5cab}
+  footer{color:#5a6b7d;font-size:13px;padding:0 0 30px}
+  @media print{nav{position:static} section{break-inside:avoid} body{background:#fff}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<span class="pill">NIE JEST PORADĄ PRAWNĄ</span>
+<p style="font-size:13px;margin:8px 0 0;opacity:.85">*wygenerowane przez AI, tekst może zawierać błędy, nieprawdziwe przepisy, nieaktualne ceny (wymaga potwierdzenia przed realnym użyciem).</p>
+<h1>e-Doręczenia i e-Sąd — wersja V25.<br>Jak tanio wysyłać pisma do firm i urzędów (e-Doręczenia) oraz dochodzić pieniędzy od firm (e-Sąd).</h1>
+
+</div></header>
+<nav><div class="wrap">
+<a href="#co-to">1. e-Doręczenia</a><a href="#kto-musi">2. Kto musi mieć</a><a href="#zalozenie">3. Jak założyć</a><a href="#szukanie">4. Jak znaleźć adres</a><a href="#wysylka">5. Jak wysłać</a><a href="#cenniki">6. Cenniki korespondencji</a><a href="#esad">7. e-Sąd</a><a href="#oplaty">8. Opłaty sądowe</a><a href="#odsetki">9. Odsetki i przedawnienie</a><a href="#koszty">10. Koszty listów</a><a href="#kroki">11. Krok po kroku</a><a href="#dokumenty">12. Dokumenty</a><a href="#porownanie">13. e-Sąd vs zwykły sąd</a><a href="#komornik">14. Komornik — koszty</a><a href="#slowniczek">Słowniczek</a>
+</div></nav>
+<main><div class="wrap">
+
+
+
+<section id="co-to">
+<h2>1. Co to jest adres do doręczeń elektronicznych (ADE)?</h2>
+<p>Elektroniczny odpowiednik adresu pocztowego, na który urzędy i inne osoby mogą wysyłać oficjalne pisma: decyzje administracyjne, wezwania z urzędu, pisma z ZUS, korespondencję z urzędu skarbowego, korespondencję do firm, inne dokumenty urzędowe.</p>
+<div class="box blue"><h4>Ważne — co to NIE jest</h4>
+<ul>
+<li><b>To nie jest zwykły adres e-mail</b> jak Gmail czy Onet.</li>
+<li>Wiadomości odbierasz w <b>specjalnej skrzynce e-Doręczeń</b>, a nie w zwykłej skrzynce pocztowej.</li>
+<li><mark class="hl">Skutki doręczenia zależą od usługi:</mark> w PURDE zasady doręczenia i dowody określa ustawa (art. 41–42); w kwalifikowanej usłudze RDE art. 41–42 stosuje się odpowiednio (art. 44), a szczegóły dowodów określa dostawca. To nie znaczy, że każda wiadomość elektroniczna automatycznie zastępuje każdy rodzaj przesyłki wymaganej przepisami szczególnymi — konkretne postępowanie może mieć dodatkowe przepisy o sposobie wnoszenia i doręczania pism. Dostajesz elektroniczne potwierdzenie doręczenia / odbioru (w PURDE: dowód wysłania i dowód otrzymania).</li>
+<li>Trzeba regularnie sprawdzać skrzynkę, bo odebranie pisma ma wpływ na terminy urzędowe.</li>
+</ul></div>
+<div class="box red"><h4>Fikcja doręczenia: 14 dni — najważniejsza zasada (PURDE)</h4> <p><b>Zakres:</b> poniższe zasady dotyczą doręczania korespondencji w ramach publicznej usługi rejestrowanego doręczenia elektronicznego (PURDE). Do <b>kwalifikowanej usługi RDE</b> przepisy art. 41 i 42 stosuje się <b>odpowiednio</b> (art. 44 ustawy o doręczeniach elektronicznych). O fikcji 14 dni decyduje więc to, <b>kto jest nadawcą i kto jest odbiorcą</b>: fikcja działa tylko w relacji podmiot publiczny → podmiot niepubliczny. Jeżeli odbiorcą jest inny podmiot publiczny (urząd → urząd), doręczenie następuje z chwilą wpłynięcia korespondencji na jego ADE (art. 41 ust. 1 pkt 2, art. 42 ust. 1 pkt 2) — bez 14-dniowej fikcji. Szczegóły techniczne dowodów (format, standard) określa dostawca kwalifikowany.</p>
+<p>Pismo od podmiotu publicznego <b>do Ciebie jako podmiotu niepublicznego</b> uznaje się za doręczone w chwili, gdy je odbierzesz. <b>Jeśli go nie odbierzesz — uznaje się je za doręczone w dniu następującym po upływie 14 dni od wskazanego w dowodzie otrzymania dnia wpłynięcia</b> do skrzynki. Od tej daty biegną terminy na odpowiedź, odwołanie czy zapłatę. Nieotwieranie skrzynki nie wstrzymuje terminów.</p>
+<p class="small">Podstawa: art. 41 ust. 1 pkt 3 i art. 42 ust. 2 ustawy o doręczeniach elektronicznych.</p></div>
+<div class="box red"><h4>PUŁAPKA: A w drugą stronę — gdy to Ty wysyłasz do podmiotu publicznego lub firmy, to NIE działa tak samo</h4>
+<p><b>Uwaga o zakresie:</b> poniższe zasady (art. 41–42) dotyczą PURDE, a do kwalifikowanej usługi RDE stosuje się je <b>odpowiednio</b> (art. 44). O momencie doręczenia decyduje więc nie sama nazwa usługi, ale <b>kto jest nadawcą, a kto odbiorcą</b>.</p>
+<ul>
+<li><b>Do PODMIOTU PUBLICZNEGO (urząd, ZUS, urząd skarbowy, gmina): liczy się sam wpływ.</b> Dowód otrzymania wystawiany jest w chwili wpłynięcia korespondencji na ADE urzędu (art. 41 ust. 1 pkt 2, art. 42 ust. 1 pkt 2 ustawy o doręczeniach elektronicznych). Pismo uznaje się za wniesione w dniu wpłynięcia, niezależnie od tego, kiedy urzędnik je otworzy i przeczyta. Zachowaj <b>dowód otrzymania</b> — to Twój dowód, że zdążyłeś z terminem, np. odwołaniem czy wnioskiem.</li>
+<li><b>Do FIRMY (podmiot niepubliczny) — zależy od nadawcy.</b> <b>Jeśli nadawcą jesteś Ty</b> (osoba prywatna lub firma): liczy się dopiero odebranie. Dowód otrzymania wystawiany jest dopiero po odebraniu korespondencji przez firmę (art. 41 ust. 1 pkt 1, art. 42 ust. 1 pkt 1 — w kwalifikowanej RDE stosowane odpowiednio na podstawie art. 44). Przez odebranie rozumie się każde działanie adresata, po którym dysponuje dokumentem, który wpłynął na ten adres, i może zapoznać się z jego treścią (art. 41 ust. 2). <b>Jeśli nadawcą jest podmiot publiczny</b> (urząd → firma): po 14 dniach bez odebrania działa fikcja doręczenia. Firma nie jest więc „zwolniona” z fikcji z samego faktu, że jest firmą. Odwrotnie: jeśli <b>Ty</b> wyślesz wezwanie do zapłaty do prywatnej spółki, a spółka zignoruje powiadomienia i nigdy nie otworzy wiadomości, system <b>NIE wystawi Ci automatycznie dowodu otrzymania po 14 dniach</b> — automatyczny dowód po 14 dniach dotyczy wyłącznie korespondencji przesłanej <b>przez podmiot publiczny</b> (art. 41 ust. 1 pkt 3). Nie czekaj bezczynnie na taki dowód.</li>
+<li><b>Co wtedy w sądzie? Rozdziel cztery różne rzeczy.</b> (1) <b>Dowód wysłania</b> — potwierdza tylko, że wysłałeś. Sam w sobie nie przesądza o doręczeniu. (2) <b>Techniczne wpłynięcie</b> — zaistnienie warunków technicznych umożliwiających adresatowi odebranie dokumentu (art. 41 ust. 3). (3) <b>Ustawowy moment doręczenia</b> — wynika z art. 41–42 (w kwalifikowanej RDE stosowanych odpowiednio na podstawie art. 44): odebranie, wpłynięcie na adres podmiotu publicznego albo fikcja po 14 dniach, gdy nadawcą jest podmiot publiczny. (4) <b>Moment złożenia oświadczenia woli</b> — oświadczenie w postaci elektronicznej jest złożone innej osobie z chwilą, gdy wprowadzono je do środka komunikacji elektronicznej tak, żeby osoba ta mogła zapoznać się z jego treścią (art. 61 § 2 KC). Skuteczność zależy więc od <b>możliwości zapoznania się z treścią</b>, a nie wyłącznie od technicznego statusu wysyłki — sąd oceni, czy ten warunek został spełniony. <b>Zastrzeżenie:</b> skuteczność doręczenia i skuteczność konkretnego oświadczenia prawnego to dwie różne kwestie. Dowód otrzymania (albo jego brak) nie przesądza sam w sobie, czy np. wezwanie wywołało skutki przewidziane umową albo przepisami — to ocenia się odrębnie. Jeśli termin jest krytyczny (np. wypowiedzenie, wezwanie przed pozwem), rozważ równoległe wysłanie papierowego listu poleconego za potwierdzeniem odbioru.</li>
+<li>Jeśli firma nie ma ADE, e-Doręczenia do niej nie wyślesz — zostaje papierowy list polecony za potwierdzeniem odbioru.</li>
+</ul></div>
+<div class="box blue"><h4>Nazewnictwo: EPO to nie dowód stosowany w PURDE</h4>
+<p>W PURDE operator wystawia <b>dowód wysłania</b> i <b>dowód otrzymania</b> (art. 40 ustawy o doręczeniach elektronicznych). W panelu skrzynki szukaj pliku o nazwie <b>„dowód otrzymania”</b>, a nie „EPO”. <b>EPO — Elektroniczne Potwierdzenie Odbioru</b> — to dowód w <b>publicznej usłudze hybrydowej (PUH)</b>: po odebraniu wiadomości papierowej lub zwrocie przesyłki poleconej w obrocie krajowym. W PUH występują też dowód wysłania i dowód odrzucenia (odmowa przyjęcia). Skrót EPO zna też tradycyjna poczta papierowa, ale w e-Doręczeniach nie myl go z dowodem otrzymania w PURDE.</p></div>
+<p>→ <a href="#slowniczek">Słowniczek pojęć (BAE, PURDE, PUH, dostawca kwalifikowany) — na dole strony</a></p>
+
+<div class="box amber"><h4> ePUAP — nie zniknął całkowicie, ale nie jest już domyślnym kanałem</h4> <p>Okres przejściowy ePUAP zakończył się <b>31 grudnia 2025 r.</b> Od <b>1 stycznia 2026 r.</b> e-Doręczenia stały się podstawowym i domyślnym kanałem komunikacji administracyjnej, ale <b>ePUAP nie stał się całkowicie bezużyteczny dla obywatela</b> — nadal można go używać tam, gdzie przepis szczególny go dopuszcza, a między podmiotami publicznymi — do <b>30 września 2029 r.</b> (art. 147 ust. 1). <b>Uwaga — nie czytaj tego zbyt szeroko:</b> w FAQ chodzi o dedykowane formularze / e-usługi, w których przepis dopuszcza ePUAP. W zwykłym postępowaniu administracyjnym (KPA) albo podatkowym po 1.01.2026 r. sam brak ADE nie daje prawa do skutecznego wysłania zwykłego podania / odwołania przez ePUAP, chyba że przepis szczególny na to pozwala albo sprawa nie wymaga doręczeń w trybie KPA (np. informacja publiczna). <b>Dla obywatela bez ADE</b> FAQ gov.pl podaje dokładną regułę dla takich e-usług: jeśli sprawa może być załatwiona tylko przez ePUAP — komunikacja pójdzie przez ePUAP; jeśli zarówno przez ePUAP, jak i e-Doręczenia — użyty będzie ePUAP (bo obywatel nie ma ADE); jeśli sprawa wymaga e-Doręczeń — osoba bez ADE nie wyśle pisma i zostanie poproszona o założenie skrzynki. Dopiero gdy Twoja sprawa wymaga e-Doręczeń, a wyślesz pismo przez ePUAP, może zostać uznane za niewniesione. <b>Nie wysyłaj</b> więc wezwania do urzędu przez ePUAP „bo tak było kiedyś” — najpierw sprawdź, czy w Twojej sprawie przepis szczególny dopuszcza ePUAP (np. niektóre deklaracje podatkowe lokalne składane do gminy). Wybór kanału zależy więc od tego, czy masz ADE i jakie kanały dopuszcza konkretna sprawa.</p></div>
+</section>
+
+<section id="kto-musi">
+<h2>2. Kto musi mieć adres do e-Doręczeń i od kiedy?</h2>
+<table>
+<tr><th>Kto</th><th>Od kiedy</th><th>Weryfikacja / doprecyzowanie</th></tr>
+<tr><td>Urzędy administracji publicznej (główne grupy)</td><td>1 stycznia 2025 r.</td><td>Tabela pokazuje główne grupy, nie kompletny harmonogram. Od 1.01.2026 e-Doręczenia to podstawowy kanał doręczeń elektronicznych podmiotów publicznych. Wyjątki — patrz dwa wiersze poniżej.</td></tr> <tr><td>ABW, AW, SKW, SWW, CBA i resort obrony narodowej</td><td>31 grudnia 2026 r.</td><td>Art. 155 ust. 5a ustawy o doręczeniach elektronicznych — późniejszy termin dla tych podmiotów.</td></tr> <tr><td>Sądy, trybunały, komornicy, prokuratura, organy ścigania i Służba Więzienna</td><td>1 października 2029 r.</td><td>Art. 155 ust. 7. JST w zakresie PUH — też od 1.10.2029 r. (art. 155 ust. 6).</td></tr>
+<tr><td>Adwokaci, radcowie prawni, doradcy podatkowi, doradcy restrukturyzacyjni, rzecznicy patentowi i notariusze (wykonujący zawód)</td><td>1 stycznia 2025 r.</td><td>Zamknięty katalog 6 zawodów z art. 9 ust. 1 pkt 1–6 ustawy o doręczeniach elektronicznych — nie dotyczy np. lekarzy czy architektów.</td></tr>
+<tr><td>Nowe firmy wpisywane do CEIDG</td><td>Od 1 stycznia 2025 r. — od dnia wpisu</td><td></td></tr>
+<tr><td>Firmy wpisane wcześniej do KRS</td><td>1 kwietnia 2025 r.</td><td></td></tr>
+<tr><td>Firmy wpisane wcześniej do CEIDG (przed 1.01.2025 r.)</td><td>1 października 2026 r.</td><td>Precyzja: adres trzeba było uzyskać do 30.09.2026, obowiązek stosowania — od 1.10.2026. Wyjątek: jeśli taki przedsiębiorca zmieniał wpis po 30.06.2025 r., obowiązek powstał już od momentu zmiany wpisu (od 1.07.2025).</td></tr>
+<tr><td>JDG zawieszona</td><td>Tak samo jak aktywna</td><td> Zawieszenie działalności nie zwalnia z obowiązku posiadania ADE.</td></tr>
+</table>
+<h3>Czy są sankcje za niezałożenie adresu ADE?</h3>
+<p>Ustawa <b>nie przewiduje kary pieniężnej / grzywny za samo spóźnienie</b> — ale <b>brak kary pieniężnej nie oznacza braku praktycznych konsekwencji</b> w przypadku braku adresu ADE po 1 października 2026 r.:</p>
+<ul>
+<li><b>To nie znaczy, że nic się nie dzieje:</b> bez aktywnego ADE / bez podania we wniosku o zmianę danych do utworzenia adresu nie przejdzie zmiana wpisu w CEIDG — we wniosku o zmianę trzeba podać dane do utworzenia ADE.</li>
+<li><b>Brak adresu i nieaktywna skrzynka to różne sytuacje.</b> Jeżeli przedsiębiorca nie ma ADE albo skrzynka nie jest aktywna, urząd nie może po prostu uznać, że wiadomość elektroniczna została skutecznie doręczona na nieistniejący/nieaktywny adres. Zgodnie z informacją Ministerstwa Cyfryzacji korespondencja urzędowa jest w takiej sytuacji kierowana w dostępny prawem sposób, w tym papierowo. Sam brak ADE nie powoduje automatycznie kary pieniężnej; nie oznacza jednak, że przedsiębiorca jest zwolniony z obowiązku uzyskania adresu.</li>
+<li>Jeżeli ADE jest aktywny, należy regularnie sprawdzać skrzynkę — skutki doręczenia i terminy wynikają z ustawy, także gdy adresat nie otworzy wiadomości.</li>
+<li>Przypisanie do „Ministerstwa Rozwoju i Technologii z 1.10.2026” było nieprecyzyjne — komunikaty o terminach i braku kary pieniężnej publikuje przede wszystkim Ministerstwo Cyfryzacji i biznes.gov.pl.</li>
+</ul>
+<div class="box purple"><h4> CEIDG — co się zmieniło jesienią 2026</h4>
+<ul>
+<li><b>Od 14 października 2026 r.</b> obowiązują nowe wzory formularzy CEIDG (m.in. CEIDG-1, CEIDG-ZS, CEIDG-OP). Stare wzory nie obowiązują.</li>
+<li><b>Od 1 listopada 2026 r.</b> wnioski o wpis do CEIDG dotyczące <b>rozpoczęcia działalności gospodarczej przez osoby pełnoletnie</b> składane są <b>wyłącznie w formie elektronicznej</b>, w szczególności przez Biznes.gov.pl (a także mObywatel lub bankowość elektroniczną). Urzędy gmin nie przyjmują już papierowych wniosków o rozpoczęcie działalności od osób pełnoletnich.</li>
+<li><b>Wyjątek: osoby niepełnoletnie</b> rozpoczynające działalność zachowują możliwość składania papierowych wniosków o rozpoczęcie działalności w urzędzie gminy <b>do 31 października 2028 r.</b> (wniosek składa przedstawiciel ustawowy). Nie jest więc prawdą, że od listopada 2026 r. absolutnie wszystkie osoby muszą rejestrować działalność elektronicznie.</li> <li>To dwa osobne wymogi, nie jeden: (1) od 1.10.2026 przedsiębiorca z CEIDG musi mieć aktywny ADE; (2) od 1.11.2026 wniosek o <b>rozpoczęcie</b> działalności przez osobę pełnoletnią składa się tylko elektronicznie — do tego potrzebna jest identyfikacja elektroniczna (np. Profil Zaufany / mObywatel / bankowość). Pozostałe wnioski CEIDG (zmiana wpisu, zawieszenie, wznowienie, wykreślenie) — sposób składania bez zmian do 31.10.2028 r.</li>
+</ul></div>
+</section>
+
+<section id="zalozenie">
+<h2>3. Założenie adresu jako osoba prywatna</h2>
+<p>Założenie adresu jako osoba prywatna jest <b>bezpłatne</b> i można zrobić to przez internet. <b>Nie musisz prowadzić firmy.</b> Jest dobrowolne — ale <mark class="hl">uwaga: po założeniu i aktywacji urzędy mogą doręczać Ci tam pisma (jako podmiotowi niepublicznemu) z 14-dniową fikcją doręczenia — patrz sekcja 1.</mark></p>
+<h3>Krok po kroku — obywatel</h3>
+<ol class="step">
+<li>Wejdź na oficjalną stronę: <a href="https://www.gov.pl/web/gov/uzyskaj-adres-do-e-doreczen-u-publicznego-dostawcy-uslugi-e-doreczen">Uzyskaj adres do e-Doręczeń u publicznego dostawcy</a>.</li>
+<li>Kliknij „Start”.</li>
+<li>Wybierz „Dla obywatela (osoby fizycznej)”.</li>
+<li>Zaloguj się Profilem Zaufanym, przez bank lub aplikacją mObywatel.</li>
+<li>Wypełnij wniosek swoimi danymi.</li>
+<li>Sprawdź dane i podpisz wniosek elektronicznie.</li>
+<li>Poczekaj na utworzenie adresu.</li>
+</ol>
+<h3>Aktywacja skrzynki</h3>
+<ol class="step">
+<li>Wejdź na <a href="https://mobywatel.gov.pl">mObywatel.gov.pl</a>.</li>
+<li>Otwórz zakładkę „Twoje skrzynki”.</li>
+<li>Kliknij „Aktywuj skrzynkę”.</li>
+<li>Podaj e-mail do powiadomień i zatwierdź aktywację.</li>
+</ol>
+<div class="box green"><p><b>Po aktywacji</b> bezpłatnej skrzynki możesz odbierać i wysyłać korespondencję do podmiotów publicznych. Jeżeli chcesz wysyłać oficjalną korespondencję do prywatnych firm lub innych osób, potrzebujesz dostępu do kwalifikowanej usługi RDE, która jest płatna. Bezpłatna skrzynka sama w sobie nie daje więc bezpłatnej wysyłki do firm — to dwie różne usługi: publiczna PURDE (bezpłatna komunikacja z podmiotami publicznymi) i kwalifikowana RDE (płatna komunikacja między podmiotami niepublicznymi). Jeśli masz Profil Zaufany lub mObywatel, aktywację załatwisz bez wychodzenia z domu.</p></div>
+<div class="box amber"><h4>Firma ≠ osoba prywatna — osobny adres</h4>
+<ul>
+<li><b>Prywatny ADE nie zastępuje firmowego.</b> Firma potrzebuje osobnego adresu ADE wpisanego do BAE jako przedsiębiorca. Prywatna skrzynka założona w mObywatel „dla siebie” się nie liczy dla JDG / spółki.</li>
+<li>Firmowy ADE zakładasz przez Biznes.gov.pl / wniosek o wpis lub zmianę wpisu w CEIDG / KRS — nie przez ścieżkę „Dla obywatela”.</li>
+<li>Jeśli prowadzisz JDG i masz już prywatny ADE — i tak musisz założyć / aktywować firmowy.</li>
+</ul></div>
+</section>
+
+<section id="szukanie">
+<h2>4. Jak znaleźć adres e-Doręczeń firmy lub urzędu?</h2>
+<h3>Firma</h3>
+<ul>
+<li><b>Wyszukiwanie w Google:</b> <code>adres e-doręczeń "nazwa firmy"</code></li>
+<li><b>CEIDG — Baza przedsiębiorców na Biznes.gov.pl:</b> <a href="https://www.biznes.gov.pl">biznes.gov.pl</a> — wyszukiwarka przedsiębiorców CEIDG, tam jest też adres ADE firmy, jeśli go ma. Uwaga: <code>aplikacja.ceidg.gov.pl</code> to dziś aplikacja dla urzędników, a nie ścieżka dla przedsiębiorcy.</li>
+<li><b>BAE — Baza Adresów Elektronicznych:</b> centralny rejestr adresów ADE na <a href="https://edoreczenia.gov.pl/">edoreczenia.gov.pl</a> — adres odbiorcy sprawdzisz też w swojej skrzynce e-Doręczeń.</li>
+<li>Przykład formatu adresu (przykład fikcyjny — nie wysyłaj na ten adres, wpisz adres konkretnego odbiorcy): <code>AE:PL-81536-74484-VVSUF-18</code></li>
+<li>Dla spółek z KRS — sprawdź odpis / wyszukiwarkę KRS i stronę firmy, urzędy publikują ADE w BIP.</li>
+</ul>
+<div class="box blue"><p><b>Warto wiedzieć:</b> Trzy różne rzeczy — nie mieszaj ich: (1) <b>wpis do BAE</b> — adres jest ewidencjonowany w rejestrze; (2) <b>widoczność w publicznej wyszukiwarce</b> — nie każdy wpisany adres jest w niej publicznie wyszukiwalny; (3) <b>kto może wyszukiwać ADE obywateli</b> — wyłącznie podmioty publiczne. Osoby fizyczne, firmy i inne podmioty niepubliczne mogą wyszukiwać w BAE tylko adresy podmiotów publicznych (FAQ gov.pl). Adres prywatny znasz zwykle tylko wtedy, gdy ktoś Ci go sam poda.</p></div>
+<h3>Urząd</h3>
+<ul>
+<li>Urzędy powinny mieć adres do e-Doręczeń podany na swojej stronie / w BIP, lub</li>
+<li>skorzystaj z wyszukiwarki: <a href="https://www.gov.pl/web/e-doreczenia/sprawdz-czy-twoj-urzad-korzysta-z-e-doreczen">Sprawdź, czy Twój urząd korzysta z e-Doręczeń</a></li>
+</ul>
+<div class="box amber"><h4>Uwaga: sądy, prokuratura i komornicy — nie przez ADE do 1.10.2029 r.</h4>
+<p>Sądy powszechne, trybunały, komornicy, prokuratura, organy ścigania i Służba Więzienna mają obowiązek stosowania e-Doręczeń dopiero <b>od 1 października 2029 r.</b> (art. 155 ust. 7 ustawy o doręczeniach elektronicznych). Do tego czasu nie zakładaj, że cała korespondencja z sądem pójdzie przez ADE. To termin, od którego organy te mają obowiązek stosowania e-Doręczeń, a nie gwarancja, że każda korespondencja sądowa będzie szła wyłącznie przez ADE. Pozew do e-Sądu składasz <b>wyłącznie przez portal e-sad.gov.pl</b>. W zwykłych sądach pełnomocnicy zawodowi korzystają z Portalu Informacyjnego, a obywatele — co do zasady tradycyjnie pocztą, chyba że sprawa toczy się w EPU. <b>Od 1 czerwca 2026 r. osoby fizyczne i przedsiębiorcy mogą dobrowolnie złożyć oświadczenie o wyborze doręczeń elektronicznych przez Portal Informacyjny Sądów Powszechnych</b> — po złożeniu takiego oświadczenia sąd będzie doręczał im pisma przez Portal. Bez takiego oświadczenia nie ma automatycznych doręczeń elektronicznych z sądu.</p></div>
+</section>
+
+<section id="wysylka">
+<h2>5. Czy zwykły Kowalski może wysłać wiadomość na taki adres?</h2>
+<p><b>Tak!</b> Zwykły obywatel może wysłać wiadomość na taki adres, ale <b>nie przez zwykłą pocztę Gmail, Onet czy Outlook</b>. Musi skorzystać z systemu e-Doręczeń. To nie jest e-mail — to przesyłka w systemie rejestrowanego doręczenia elektronicznego.</p>
+<h3>Jak to zrobić? Uwaga: ścieżka zależy od odbiorcy</h3> <p><b>Do urzędu (PURDE — bezpłatnie, 0 zł):</b> kroki poniżej dotyczą standardowego formularza w bezpłatnej skrzynce.</p> <ol class="step"> <li>Wejdź na <a href="https://edoreczenia.gov.pl/">e-Doręczenia — edoreczenia.gov.pl</a></li> <li>Zaloguj się Profilem Zaufanym, e-dowodem lub inną dostępną metodą.</li> <li>Otwórz opcję „Napisz wiadomość”.</li> <li>Wybierz e-Doręczenia.</li> <li>Wpisz adres odbiorcy (przykład fikcyjny poniżej — nie wysyłaj na ten adres, wpisz adres konkretnego odbiorcy): <code>AE:PL-69368-60558-UBWRD-28</code>.</li> <li>Napisz wiadomość i wyślij. Zachowaj dowód wysłania i dowód otrzymania — to Twój odpowiednik „potwierdzenia odbioru” w e-Doręczeniach.</li> </ol> <div class="box amber"><p><b>Do firmy (kwalifikowana usługa RDE — płatna):</b> standardowy bezpłatny formularz PURDE nie służy do wysyłki do prywatnej firmy. Do wysyłki do firmy potrzebujesz usługi kwalifikowanej (np. Q-Doręczenia Poczty Polskiej u kwalifikowanego dostawcy): aktywuj usługę kwalifikowaną zgodnie z instrukcją dostawcy i <b>opłać przesyłkę przed nadaniem</b>. Nie zakładaj, że wpisanie adresu ADE firmy w tym samym bezpłatnym oknie, co do urzędu, wystarczy — to dwie różne usługi o różnych zasadach płatności. Pamiętaj też: skuteczność doręczenia przesyłki i skuteczność konkretnego oświadczenia prawnego (np. wezwania) to dwie różne kwestie — patrz sekcja 1.</p></div>
+<div class="box red"><h4>Ważne</h4><p>Aby wysyłać wiadomości przez e-Doręczenia — do podmiotu publicznego przez PURDE, do firmy przez kwalifikowaną usługę RDE — jako osoba prywatna <b>musisz mieć własny adres ADE</b>. Bez własnego adresu i aktywnej skrzynki nie wyślesz pisma przez ten system.</p></div>
+<div class="box amber"><h4>Co jeśli firma / urząd NIE ma adresu ADE?</h4>
+<p><b>Dwie różne sytuacje — nie mieszaj ich.</b> <b>Ty jako prywatny nadawca:</b> nie wyślesz kwalifikowanego e-Doręczenia, jeśli odbiorca nie ma ADE — system nie znajdzie odbiorcy. Zostaje Ci <b>papierowy list polecony za potwierdzeniem odbioru</b> (cennik poniżej). <b>Urząd jako nadawca (podmiot publiczny) wobec adresata bez ADE:</b> nie musi od razu iść zwykłym listem poleconym — może zastosować <b>publiczną usługę hybrydową (PUH)</b>: nadaje korespondencję elektronicznie, a Poczta Polska drukuje ją i doręcza papierowo (art. 4–5 ustawy o doręczeniach elektronicznych). PUH to przewidziany ustawowo sposób doręczania korespondencji papierowej, a nie „zwykły list polecony”. Dla firm bez ADE od 2026 r. to już raczej wyjątek — większość ma obowiązek mieć adres.</p></div>
+</section>
+
+<section id="cenniki">
+<h2>6. Cenniki i koszty korespondencji — co jest aktualne, a co historyczne</h2>
+<p>Aktualne są stawki PURDE / PUH v6.0 oraz pakiety Q-Doręczeń v2.1 (od 1.11.2026 r. do 30.06.2027 r.). Stawki pocztowe z 2025 r. oraz pojedyncza przesyłka Q-Doręczeń z cennika z 2023 r. to tylko przykłady historyczne — nie traktuj ich jako cen aktualnych, służą tylko do pokazania rzędu wielkości.</p>
+<h3>6.1. e-Doręczenia — wysyłka</h3>
+<table>
+<tr><th>Usługa</th><th>Kiedy</th><th>Cena (aktualna albo przykład historyczny — patrz wiersz)</th><th>Kto płaci</th></tr>
+<tr><td><b>PURDE</b> — publiczna usługa rejestrowanego doręczenia elektronicznego</td><td>Odbiorca ma skrzynkę ADE, <b>odbiorca to podmiot publiczny</b> (urząd, ZUS, US)</td><td><b>0 zł</b></td><td>— (art. 52 ust. 3 ustawy o doręczeniach elektronicznych)</td></tr>
+<tr><td><b>PURDE</b> — publiczna usługa rejestrowanego doręczenia elektronicznego</td><td><b>Nadawca to podmiot publiczny</b> (urząd, ZUS, urząd skarbowy), odbiorca to podmiot niepubliczny (firma, osoba prywatna)</td><td><b>6,52 zł brutto</b> za wysyłkę (5,30 zł netto)</td><td>Płaci nadawca — podmiot publiczny</td></tr>
+<tr><td><b>Kwalifikowana usługa RDE</b> — kwalifikowana usługa rejestrowanego doręczenia elektronicznego (u Poczty Polskiej: Q-Doręczenia)</td><td><b>Typowo: żadna strona nie jest podmiotem publicznym</b> — firma → firma, firma → osoba prywatna, osoba → firma. Kwalifikowana RDE umożliwia też korespondencję z podmiotem publicznym (wtedy do podmiotu publicznego masz też bezpłatną PURDE)</td><td><b>Przykład historyczny — Poczta Polska, Q-Doręczenia:</b> pojedyncze przekazanie korespondencji <b>2,20 zł brutto (1,79 zł netto)</b> wg <a href="https://bip.poczta-polska.pl/wp-content/uploads/Cennik_Kwalifikowanej_Uslugi_RDE_v.1.0.pdf">Cennika kwalifikowanej usługi RDE Poczty Polskiej (obowiązuje od 23.01.2023 r.)</a>. <b>Nie potwierdzono nowszej taryfy pojedynczych przesyłek — ceny poniżej to przykład z tego cennika, nie gwarancja aktualnej taryfy; przed wysyłką sprawdź aktualny cennik dostawcy</b>; pojedyncza przesyłka max 10 MB. W pakietach w ramach Platformy e-Usług obowiązuje obecnie <b><a href="https://bip.poczta-polska.pl/cennik-pakietow-kwalifikowanej-uslugi-rde/">cennik pakietów kwalifikowanej usługi RDE v2.1</a> od 1.11.2026 r. do 30.06.2027 r.</b>: pakiet 3 sztuk — <b>2,20 zł brutto za miesiąc</b>; 10 sztuk — <b>20,79 zł</b>; 20 sztuk — <b>39,11 zł</b>; 50 sztuk — <b>86,10 zł</b>. Niewykorzystane przesyłki przechodzą na kolejny okres rozliczeniowy. Nie myl opłaty za pakiet 3 sztuk (2,20 zł miesięcznie za pakiet) z ceną pojedynczego przekazania 2,20 zł brutto. Przed zakupem sprawdź warunki pakietu i aktualną taryfę dostawcy. <b>U innych dostawców wg ich taryf — przed wysyłką sprawdź aktualny cennik. NIE przyjmuj 6,52 zł jako stałej stawki.</b></td><td>Płaci nadawca wg taryfy dostawcy</td></tr>
+<tr><td><b>PUH</b> — publiczna usługa hybrydowa</td><td>Odbiorca nie ma skrzynki — Poczta drukuje i doręcza papierowo</td><td><b>10,27 zł brutto</b> za wysyłkę (8,35 zł netto)</td><td>Nadawca — <b>wyłącznie podmiot publiczny (urząd)</b>. Prywatna osoba ani firma NIE może nadać PUH (art. 2 pkt 7 ustawy o doręczeniach elektronicznych)</td></tr>
+<tr><td>Założenie adresu ADE + skrzynka u publicznego dostawcy (Poczta Polska)</td><td>Obywatel i przedsiębiorca</td><td><b>0 zł</b></td><td>—</td></tr>
+<tr><td>Odbiór pisma w skrzynce</td><td>Odbiorca</td><td><b>0 zł</b></td><td>—</td></tr>
+</table>
+<p class="small">Cennik PURDE / PUH: <a href="https://bip.poczta-polska.pl/wp-content/uploads/Cennik_PURDE_i_PUH_2026_v.6.0-1.pdf">Cennik PURDE i PUH Poczty Polskiej v.6.0, obowiązujący od 05.10.2026 r.</a> Stawki w cenniku to <b>ceny netto</b> — do każdej należy doliczyć <b>23% VAT</b>: PURDE 5,30 zł netto = <b>6,52 zł brutto</b>, PUH 8,35 zł netto = <b>10,27 zł brutto</b>. Wysyłka przez PURDE od podmiotu niepublicznego do podmiotu publicznego jest zwolniona z opłaty (art. 52 ust. 3). <b>Stawka 6,52 zł brutto dotyczy wysyłki OD podmiotu publicznego DO obywatela / firmy / ZZP</b> — nie wysyłki Kowalski → firma. Wysyłka firma → firma to kwalifikowana usługa RDE, a jej cena zależy od dostawcy kwalifikowanego.</p>
+<h3>6.2. Poczta Polska — list polecony krajowy (usługi powszechne) — stawki historyczne z 2025 r.</h3>
+<table>
+<tr><th>Przesyłka</th><th>Format S do 500 g</th><th>Format M do 1 000 g</th><th>Format L do 2 000 g</th></tr>
+<tr><td><b>Polecony ekonomiczny</b></td><td>7,80 zł</td><td>8,30 zł</td><td>15,60 zł</td></tr>
+<tr><td><b>Polecony priorytetowy</b></td><td>9,80 zł</td><td>10,30 zł</td><td>18,30 zł</td></tr>
+<tr><td><b>+ Potwierdzenie odbioru (ZPO)</b></td><td colspan="3">+ 4,00 zł do każdej przesyłki rejestrowanej</td></tr>
+<tr><td><b>Razem: polecony ekonomiczny + ZPO</b></td><td><b>11,80 zł</b></td><td><b>12,30 zł</b></td><td><b>19,60 zł</b></td></tr>
+<tr><td><b>Razem: polecony priorytetowy + ZPO</b></td><td><b>13,80 zł</b></td><td><b>14,30 zł</b></td><td><b>22,30 zł</b></td></tr>
+</table>
+<p class="small">Źródło: <a href="https://cennik.poczta-polska.pl/plik,1/cennik_uslug_powszechnych_w_obrocie_krajowym_i_zagranicznym_01032025.pdf">Cennik usług powszechnych Poczty Polskiej obowiązujący od 1 marca 2025 r.</a> — poniższa tabela przedstawia <b>historyczne stawki z cennika 2025 r., a nie potwierdzony cennik obowiązujący w 2026 r.</b> Przed nadaniem sprawdź aktualną taryfę Poczty Polskiej; nie używaj tych kwot jako pewnej ceny bieżącej. Ceny dotyczą usług powszechnych dla klientów indywidualnych. <b>Format określają jednocześnie masa i wymiary:</b> S — do 500 g, maks. 230 × 160 × 20 mm; M — do 1 000 g, maks. 325 × 230 × 20 mm; L — do 2 000 g, suma wymiarów maks. 900 mm, najdłuższy wymiar maks. 600 mm. Sam limit masy nie wystarcza do ustalenia formatu.</p>
+<h3>6.3. Porównanie: 1 wezwanie do zapłaty</h3>
+<table>
+<tr><th>Sposób wysyłki</th><th>Koszt 1 pisma (aktualny albo przykład historyczny — patrz wiersz)</th><th>Skutek prawny</th></tr>
+<tr><td>e-Doręczenia do firmy z ADE — przez kwalifikowaną usługę RDE</td><td><b>Poczta Polska Q-Doręczenia — aktualnie w pakietach v2.1 (od 1.11.2026 r. do 30.06.2027 r.): pakiet 3 sztuk za 2,20 zł brutto za miesiąc rozliczeniowy (ok. 0,73 zł brutto/szt. przy pełnym wykorzystaniu; niewykorzystane przesyłki przechodzą na kolejny okres). Pojedyncze przekazanie 2,20 zł brutto (1,79 zł netto) z cennika od 23.01.2023 r. to przykład historyczny, nie aktualna taryfa pojedyncza. U innych dostawców wg ich taryf. Nie 6,52 zł z automatu.</b></td><td>Skutki doręczenia wg art. 41–42 stosowanych odpowiednio (art. 44) + elektroniczny dowód otrzymania. Nie każda wiadomość zastępuje automatycznie każdą przesyłkę wymaganą przepisami szczególnymi.</td></tr>
+<tr><td>e-Doręczenia PURDE do urzędu</td><td><b>0 zł</b></td><td>Skutki doręczenia wg art. 41–42 + elektroniczny dowód otrzymania (art. 52 ust. 3). Nie każda wiadomość zastępuje automatycznie każdą przesyłkę wymaganą przepisami szczególnymi.</td></tr>
+<tr><td>Papierowy polecony ekonomiczny S + ZPO</td><td><b>11,80 zł*</b></td><td>Przykład według cennika obowiązującego od 1.03.2025 r.; sprawdź aktualną taryfę przed nadaniem</td></tr>
+<tr><td>Papierowy polecony priorytetowy S + ZPO</td><td><b>13,80 zł*</b></td><td>Przykład wg cennika z 2025 r.; sprawdź aktualną taryfę przed nadaniem. Szybsze doręczenie, ten sam skutek</td></tr>
+</table>
+<div class="box amber"><p><b>Wniosek — poprawiony:</b> do urzędu 3 pisma przez PURDE to <b>0 zł</b>. Do firmy stawka zależy od taryfy dostawcy, ale da się podać przykład rachunkowy (papier — na historycznym cenniku z 2025 r.; elektronicznie — wariant historyczny i wariant aktualny): 3 wezwania papierowo to <b>35,40 zł</b> (3 × 11,80 zł wg cennika z 2025 r., ekonomiczny S + ZPO), a elektronicznie przy historycznej cenie pojedynczej przesyłki z cennika Q-Doręczeń od 23.01.2023 r. to <b>6,60 zł</b> (3 × 2,20 zł brutto). <b>Jednak w aktualnym pakiecie 3 sztuk v2.1 koszt wynosi 2,20 zł brutto za miesiąc rozliczeniowy</b>, jeśli korzystasz z Platformy e-Usług i spełniasz warunki pakietu — wtedy przykładowa różnica względem papieru wynosi <b>33,20 zł</b> (35,40 zł − 2,20 zł). To porównanie trzech przesyłek, nie rekomendacja wysyłania trzech wezwań; w typowym sporze zwykle wystarczy jedno wezwanie. Sprawdź warunki i aktualny cennik przed zakupem. W innych pakietach / u innych dostawców wynik może być inny, więc przed wysyłką porównaj cennik konkretnego dostawcy z aktualnym kosztem poleconego (11,80 zł to stawka historyczna, nie cena aktualna). Nie zakładaj z góry oszczędności 15,84 zł — ta kwota wynikała z błędnego założenia o PURDE 6,52 zł do firmy.</p></div>
+</section>
+
+<section id="esad">
+<h2>7. E-Sąd — Elektroniczne Postępowanie Upominawcze (EPU)</h2>
+<p>Jeżeli firma jest Ci winna pieniądze, nie zapłaciła za usługę, nie zwróciła środków, nie uznała reklamacji albo nie wywiązała się z umowy, możesz dochodzić zapłaty na drodze sądowej.</p>
+<p>Jednym z najprostszych sposobów jest <b>Elektroniczne Postępowanie Upominawcze (EPU)</b>, czyli e-sąd. Pozwala złożyć pozew przez internet, bez osobistego udawania się do sądu.</p>
+<p>Strony: <a href="https://e-sad.gov.pl/">e-sad.gov.pl</a> • <a href="https://www.gov.pl/web/gov/elektroniczne-postepowanie-upominawcze-epu--usluga-online">gov.pl — EPU usługa online</a></p>
+<div class="box green"><p><b>Ważne:</b> e-sąd obsługuje sprawy z całej Polski. <b>Nie musisz mieszkać w Lublinie ani tam jechać.</b> Sprawy w EPU rozpoznaje jeden sąd w Polsce — Sąd Rejonowy Lublin-Zachód w Lublinie, VI Wydział Cywilny.</p></div>
+<ul>
+<li>Pozew składa się elektronicznie.</li>
+<li>Nie wysyła się papierowego pozwu.</li>
+<li>Nie załącza się dokumentów do pozwu, ale trzeba wskazać dowody i opisać, czego dotyczą.</li>
+<li>Opłata jest uiszczana przez system.</li>
+<li>Dane historyczne: średni czas oczekiwania na nakaz zapłaty w 2025 r. wg gov.pl wynosił <b>49 dni</b>. To statystyka za 2025 r., a nie gwarantowany ani aktualny termin rozpoznania konkretnej sprawy.</li>
+</ul>
+<h3>Co musi zawierać konto i pozew w EPU?</h3>
+<ul>
+<li>Konto w systemie EPU może założyć każdy z numerem PESEL (osoba fizyczna, JDG, pełnomocnik).</li>
+<li>W pozwie podajesz: dane stron (adresy, PESEL / NIP / inne numery identyfikacyjne), wykaz dowodów (np. umowy, faktury), uzasadnienie, numer konta bankowego do zwrotu / rozliczeń, wysokość roszczenia.</li>
+<li>Pozew podpisujesz podpisem dostępnym w systemie EPU lub kwalifikowanym podpisem elektronicznym.</li>
+<li><b>Nakaz jest doręczany zgodnie z zasadami doręczeń w postępowaniu cywilnym</b> — co do zasady pozwany otrzymuje go w formie papierowej; komunikacja pozwanego z e-sądem odbywa się tradycyjnie, chyba że pozwany sam zainicjuje komunikację elektroniczną (zaznaczy to w systemie / sprzeciwie) albo — od 1 czerwca 2026 r. — złoży oświadczenie o wyborze doręczeń elektronicznych przez Portal Informacyjny Sądów Powszechnych. Od 1.06.2026 r. osoby fizyczne i przedsiębiorcy mogą dobrowolnie wybrać doręczenia sądowe przez Portal — po złożeniu oświadczenia sąd doręcza im pisma przez Portal. Bez takiego oświadczenia (ani zainicjowania komunikacji elektronicznej w EPU) doręczenia z sądu nie przechodzą automatycznie na formę elektroniczną (patrz sekcja 4).</li>
+</ul>
+<h3>Kiedy można skorzystać z e-sądu?</h3>
+<ul>
+<li>masz wobec firmy roszczenie <b>pieniężne</b>,</li>
+<li>firma nie zapłaciła należności,</li>
+<li>możesz określić konkretną kwotę, której żądasz,</li>
+<li>potrafisz wskazać, z czego wynika zobowiązanie,</li>
+<li>znasz dane pozwanej firmy,</li>
+<li>roszczenie nie jest przedawnione <b>i stało się wymagalne nie dawniej niż 3 lata przed wniesieniem pozwu</b> — patrz czerwona ramka poniżej.</li>
+</ul>
+<div class="box red"><h4>PUŁAPKA: 3 lata do EPU to nie to samo co 6 lat przedawnienia (art. 505²⁹ᵃ KPC)</h4>
+<p>W EPU można dochodzić <b>wyłącznie roszczeń, które stały się wymagalne w okresie 3 lat przed dniem wniesienia pozwu</b>. To jest odrębny warunek od ogólnego terminu przedawnienia z Kodeksu cywilnego.</p>
+<p><b>Przykład:</b> pożyczka prywatna wymagalna 4 lata temu — choć może jeszcze nie być przedawniona (ogólny termin to zasadniczo 6 lat), <b>nie spełnia warunku dopuszczalności EPU</b>. Taką sprawę należy co do zasady skierować od razu do zwykłego sądu. Jeśli mimo to złożysz ją w EPU, sąd może stwierdzić brak podstaw do wydania nakazu i <b>umorzyć postępowanie (art. 505³³ KPC) — sprawa nie zostanie automatycznie przekazana do zwykłego sądu</b>.</p>
+<p><b>Ważne zastrzeżenie dotyczące 3 miesięcy:</b> art. 505³⁷ § 2 KPC przewiduje możliwość wniesienia pozwu o to samo roszczenie do sądu właściwości ogólnej w ciągu 3 miesięcy od dnia wydania postanowienia o umorzeniu, z określonymi skutkami dotyczącymi zachowania skutków wniesienia pozwu w EPU i zaliczenia opłaty. <b>Nie traktuj jednak tego przepisu jako automatycznego sposobu naprawienia każdego błędu przy wyborze EPU ani jako gwarancji przerwania przedawnienia.</b> W szczególności przy roszczeniu, które już w chwili wniesienia pozwu nie spełniało trzyletniego warunku z art. 505²⁹ᵃ KPC, skutki dla przedawnienia mogą być sporne i zależą od okoliczności oraz oceny sądu. Jeżeli roszczenie jest starsze niż 3 lata, bezpieczniej skierować je od razu do sądu właściwości ogólnej; nie opieraj strategii na późniejszym „ratowaniu” sprawy w trybie art. 505³⁷ § 2 KPC.</p>
+<p>Przed złożeniem pozwu w EPU sprawdź więc <b>datę wymagalności</b>, a nie tylko to, czy roszczenie „jeszcze się nie przedawniło”.</p></div>
+<div class="box amber"><h4>E-Sąd to nie to samo co e-Doręczenia do sądu</h4>
+<p>Pozew do e-Sądu składasz <b>wyłącznie przez portal e-sad.gov.pl</b> — nie przez skrzynkę e-Doręczeń. Sądy powszechne, prokuratura i komornicy mają obowiązek stosowania e-Doręczeń dopiero od <b>1 października 2029 r.</b> (art. 155 ust. 7 ustawy o doręczeniach elektronicznych). To termin obowiązku, a nie gwarancja, że od tej daty każda korespondencja sądowa pójdzie wyłącznie przez ADE.</p></div>
+<p class="small">EPU tylko dla roszczeń pieniężnych. Nie służy np. do żądania ustalenia, wydania rzeczy czy rozstrzygnięcia sporu niemajątkowego.</p>
+<h3>Przykładowe sytuacje</h3>
+<ol>
+<li>Firma nie zwróciła pieniędzy za niewykonaną usługę.</li>
+<li>Firma nie oddała pieniędzy po odstąpieniu od umowy.</li>
+<li>Przedsiębiorca nie zapłacił za wykonaną usługę.</li>
+<li>Firma nie wypłaciła należnego odszkodowania.</li>
+<li>Firma nie zwróciła pobranej opłaty.</li>
+<li>Firma nie wywiązała się z umowy i jest zobowiązana do zwrotu pieniędzy.</li>
+</ol>
+<p>E-sąd jest szczególnie przydatny, kiedy sprawa jest stosunkowo prosta, a roszczenie można jasno udokumentować. Nie jest to jednak postępowanie do rozstrzygania skomplikowanych sporów wymagających rozbudowanego postępowania dowodowego.</p>
+</section>
+
+<section id="oplaty">
+<h2>8. Opłaty sądowe w 2026 roku — poprawione i pełne</h2>
+<h3>8.1. EPU — 1/4 zwykłej opłaty</h3>
+<p>Zasada: opłata w EPU to <b>1/4 standardowej opłaty sądowej</b>, nie mniej niż <b>30 zł</b> i nie więcej niż <b>25 000 zł</b> (1/4 z limitu 100 000 zł w zwykłym sądzie). Zgodnie z informacją Ministerstwa Sprawiedliwości / gov.pl (aktualizacja 30.07.2026).</p>
+<p><b>Uwaga — „1,25%” dotyczy tylko spraw powyżej 20 000 zł</b>, gdzie opłata zwykła wynosi 5% wartości przedmiotu sporu. <b>Poniżej 20 000 zł</b> obowiązują opłaty stałe, a w EPU płacisz <b>1/4 opłaty stałej</b> (końcówkę zaokrągla się w górę do pełnego złotego, art. 21 ustawy o kosztach sądowych). Tabela poniżej jest więc poprawna — myląca była tylko definicja „czyli 1,25%” bez tego rozróżnienia. Przykład: roszczenie do 1 500 zł — opłata zwykła 30 zł lub 100 zł, a w EPU i tak płacisz minimum 30 zł.</p>
+<table>
+<tr><th>Wartość roszczenia</th><th>Opłata w EPU</th></tr>
+<tr><td>Do 1 500 zł</td><td>30 zł</td></tr>
+<tr><td>Ponad 1 500 – 4 000 zł</td><td>50 zł</td></tr>
+<tr><td>Ponad 4 000 – 7 500 zł</td><td>100 zł</td></tr>
+<tr><td>Ponad 7 500 – 10 000 zł</td><td>125 zł</td></tr>
+<tr><td>Ponad 10 000 – 15 000 zł</td><td>188 zł</td></tr>
+<tr><td>Ponad 15 000 – 20 000 zł</td><td>250 zł</td></tr>
+<tr><td>Ponad 20 000 – 2 000 000 zł</td><td>1,25%</td></tr>
+<tr><td>Powyżej 2 000 000 zł</td><td>25 000 zł</td></tr>
+</table>
+<h3>Przykładowe koszty</h3>
+<table>
+<tr><th>Dochodzona kwota</th><th>Opłata EPU</th><th>Uwaga</th></tr>
+<tr><td>500 zł</td><td>30 zł</td><td>minimum</td></tr>
+<tr><td>1 000 zł</td><td>30 zł</td><td>minimum</td></tr>
+<tr><td>2 000 zł</td><td>50 zł</td><td></td></tr>
+<tr><td>5 000 zł</td><td>100 zł</td><td></td></tr>
+<tr><td>10 000 zł</td><td><b>125 zł</b></td><td></td></tr>
+<tr><td>15 000 zł</td><td>188 zł</td><td>—</td></tr>
+<tr><td>20 000 zł</td><td>250 zł</td><td></td></tr>
+<tr><td>100 000 zł</td><td>1 250 zł</td><td>1,25%</td></tr>
+<tr><td>500 000 zł</td><td>6 250 zł</td><td>1,25%</td></tr>
+</table>
+<div class="box green"><p><b>Sprzeciw od nakazu zapłaty jest bezpłatny.</b></p></div>
+<h3>8.2. Zwykły sąd cywilny — dla porównania</h3>
+<p>Jeśli po sprzeciwie w EPU albo od razu idziesz do zwykłego sądu, płacisz pełną opłatę:</p>
+<table>
+<tr><th>Wartość przedmiotu sporu</th><th>Opłata w zwykłym postępowaniu</th></tr>
+<tr><td>Do 500 zł</td><td>30 zł</td></tr>
+<tr><td>Ponad 500 – 1 500 zł</td><td>100 zł</td></tr>
+<tr><td>Ponad 1 500 – 4 000 zł</td><td>200 zł</td></tr>
+<tr><td>Ponad 4 000 – 7 500 zł</td><td>400 zł</td></tr>
+<tr><td>Ponad 7 500 – 10 000 zł</td><td>500 zł</td></tr>
+<tr><td>Ponad 10 000 – 15 000 zł</td><td>750 zł</td></tr>
+<tr><td>Ponad 15 000 – 20 000 zł</td><td>1 000 zł</td></tr>
+<tr><td>Ponad 20 000 zł</td><td>5% wartości przedmiotu sporu, nie więcej niż <b>100 000 zł</b></td></tr>
+</table>
+<div class="box amber"><p><b>Limit opłaty w zwykłym sądzie:</b> przy wartości przedmiotu sporu powyżej 20 000 zł opłata wynosi 5% wartości roszczenia, ale nie więcej niż <b>100 000 zł</b> (art. 13 ust. 2 ustawy o kosztach sądowych w sprawach cywilnych). Limit 100 000 zł obowiązuje od 23 września 2025 r. (ustawa z 25 lipca 2025 r., Dz.U. 2025 poz. 1157). Poprzedni limit 200 000 zł już nie obowiązuje — nie stosuj go. Przy bardzo wysokich roszczeniach opłata zwykła jest więc ograniczona do 100 000 zł, a opłata w EPU do 25 000 zł.</p>
+<p><b>Przykład:</b> roszczenie 10 000 zł — w EPU płacisz 125 zł, w zwykłym sądzie 500 zł. Różnica 375 zł to realna oszczędność, jeśli sprawa jest bezsporna.</p></div>
+</section>
+
+<section id="odsetki">
+<h2>9. Odsetki i przedawnienie</h2>
+<h3>9.1. Odsetki ustawowe za opóźnienie w 2026 r.</h3>
+<table>
+<tr><th>Rodzaj odsetek</th><th>Stawka od 2026 r.</th><th>Jak liczona / podstawa</th></tr>
+<tr><td><b>Odsetki ustawowe za opóźnienie</b> — ogólne (np. konsument vs firma, osoba vs osoba)</td><td><b>9,25% w skali roku</b> od 5.03.2026</td><td>Stopa referencyjna NBP 3,75% + 5,5 pkt proc. — art. 481 § 2 Kodeksu cywilnego</td></tr>
+<tr><td><b>Odsetki ustawowe</b> (nie za opóźnienie, tylko za korzystanie z kapitału)</td><td><b>7,25% w skali roku</b> od 5.03.2026</td><td>Stopa referencyjna NBP + 3,5 pkt proc. — art. 359 § 2 KC</td></tr>
+<tr><td><b>Odsetki ustawowe za opóźnienie w transakcjach handlowych</b> — transakcje objęte ustawą, w których dłużnik nie jest podmiotem publicznym będącym podmiotem leczniczym</td><td><b>13,75% w skali roku</b> od 1.07. do 31.12.2026</td><td>Stopa referencyjna NBP + 10 pkt proc. — ustawa o przeciwdziałaniu nadmiernym opóźnieniom w transakcjach handlowych (art. 2, art. 4 pkt 3 lit. b). Zakres ustawy nie ogranicza się do klasycznych transakcji firma–firma: obejmuje m.in. przedsiębiorców, osoby wykonujące wolny zawód oraz podmioty z Prawa zamówień publicznych</td></tr>
+<tr><td><b>Odsetki ustawowe za opóźnienie w transakcjach handlowych</b> — dłużnik to podmiot publiczny będący podmiotem leczniczym</td><td><b>11,75% w skali roku</b> od 1.07. do 31.12.2026</td><td>Jak wyżej, odrębna stawka dla podmiotów leczniczych</td></tr>
+<tr><td><b>Odsetki maksymalne za opóźnienie</b></td><td><b>18,50% w skali roku</b></td><td>2 × odsetki ustawowe za opóźnienie — nie można umownie przekroczyć</td></tr>
+</table>
+<p><b>Jak to wpisać w pozwie? Najpierw ustal, od kiedy biegną odsetki — to zależy od terminu zapłaty, nie od samego wezwania.</b></p>
+<p>Jeżeli umowa skutecznie określa własną stopę odsetek za opóźnienie, można żądać odsetek umownych, ale nie wyższych niż <b>odsetki maksymalne za opóźnienie</b> (art. 481 § 2¹–2² KC). Jeżeli umowa nie określa takiej stopy albo postanowienie jest nieważne w zakresie przekraczającym limit, stosuje się odpowiednią stopę ustawową. W transakcjach handlowych sprawdź odrębne zasady ustawowe.
+</p> <ul> <li><b>Termin zapłaty był określony w umowie lub na fakturze:</b> odsetki biegną od dnia następującego po tym terminie (art. 481 § 1 KC) — nie czekaj na wezwanie i nie wpisuj w pozwie „dnia po wezwaniu”, bo wezwanie wysłane później nie przesuwa początku odsetek wstecz ani w przód. W pozwie: „od dnia [dzień po terminie zapłaty z umowy / faktury] do dnia zapłaty”. <b>Ważne:</b> termin wskazany na fakturze powinien odpowiadać uzgodnionym warunkom umowy lub właściwym przepisom. Sama faktura nie zawsze może jednostronnie ustanowić termin wymagalności — samo wpisanie terminu na fakturze nie zawsze wystarczy do ustalenia początku opóźnienia.</li> <li><b>Termin zapłaty nie był oznaczony — zwykłe zobowiązanie cywilne:</b> dłużnik ma spełnić świadczenie niezwłocznie po wezwaniu (art. 455 KC). Odsetki za opóźnienie należą się po nadejściu chwili, w której świadczenie powinno już być spełnione; przy praktycznym wyznaczeniu terminu w wezwaniu uwzględnij czas potrzebny na jego doręczenie i wykonanie.</li>
+<li><b>Brak terminu w transakcji handlowej objętej ustawą:</b> nie stosuj automatycznie powyższej reguły. Jeżeli strony transakcji handlowej nie określiły terminu zapłaty, art. 6 ustawy o przeciwdziałaniu nadmiernym opóźnieniom w transakcjach handlowych przewiduje odsetki handlowe <b>bez wezwania, po upływie 30 dni liczonych od dnia spełnienia świadczenia przez wierzyciela</b> (a w przypadkach badania towaru/usługi — od zakończenia badania). Jeżeli umowa określa termin, sprawdź także art. 5, 7 i 9 tej ustawy. Najpierw ustal, czy dana umowa i jej strony mieszczą się w zakresie ustawy.</li> </ul>
+<div class="box blue"><p><b>Termin przypadający w sobotę lub święto:</b> przy obliczaniu terminu, którego koniec przypada na sobotę albo dzień ustawowo wolny od pracy, co do zasady ostatnim dniem terminu jest następny dzień, który nie jest sobotą ani takim świętem (art. 115 KC). Sprawdź, czy reguła ma zastosowanie do konkretnego terminu i rodzaju zobowiązania — nie przesuwaj automatycznie każdego terminu wskazanego na fakturze bez analizy podstawy prawnej.</p></div>
+<p><b>Uwaga na różne okresy:</b> stawki 9,25% i 13,75% nie są uniwersalnymi stawkami dla wszystkich zaległości w całym 2026 r. Stawka zależy od rodzaju zobowiązania (np. odsetki ogólne, odsetki w transakcji handlowej, odsetki dla podmiotu leczniczego), a zmiany stopy referencyjnej NBP mogą zmienić wysokość odsetek w trakcie trwania zadłużenia. Przy obliczaniu odsetek za okres obejmujący kilka zmian podziel go na odpowiednie przedziały czasowe i zastosuj stawkę obowiązującą w każdym przedziale. Sąd sam zastosuje właściwą stawkę na dany okres. Nie wpisuj jednej sztywnej stawki na cały okres, bo stawki zmieniają się w czasie. W kalkulacji roszczenia pokaż: kwota główna + odsetki naliczone do dnia pozwu + odsetki dalsze do dnia zapłaty.</p>
+<p class="small">Przykład: 10 000 zł zaległe przez 1 rok przy 9,25% = 925 zł odsetek. Przy 13,75% (jeśli to transakcja handlowa) = 1 375 zł.</p>
+<div class="box blue"><h4>Co to jest B2B?</h4>
+<p><b>B2B</b> = <i>business-to-business</i>, czyli transakcja <b>firma–firma</b>: obie strony są przedsiębiorcami. Przykład: Twoja JDG wystawia fakturę innej firmie / spółce za usługę albo towar.</p>
+<p>Odsetki handlowe <b>13,75%</b> należą się tylko wtedy, gdy umowa spełnia przesłanki <b>transakcji handlowej</b> z ustawy o przeciwdziałaniu nadmiernym opóźnieniom w transakcjach handlowych: odpłatna dostawa towaru lub odpłatne świadczenie usługi, zawarta w związku z wykonywaną działalnością przez strony objęte ustawą. Nie każda umowa między dwoma przedsiębiorcami automatycznie jest taką transakcją — sprawdź przesłanki w swojej sprawie. Gdy po drugiej stronie jest <b>konsument</b> (osoba prywatna, nie firma) albo pożyczka między osobami prywatnymi — stosujesz ogólne <b>9,25%</b>.</p></div>
+<h3>9.2. Przedawnienie — kiedy „roszczenie nie jest przedawnione”?</h3>
+<table>
+<tr><th>Roszczenie</th><th>Termin przedawnienia</th></tr>
+<tr><td>Ogólny — np. prywatna pożyczka między osobami fizycznymi, brak przepisu szczególnego</td><td><b>6 lat</b> — art. 118 KC</td></tr>
+<tr><td>Roszczenia o świadczenia okresowe (np. czynsz, odsetki) oraz roszczenia związane z prowadzeniem działalności gospodarczej (np. faktury — o ile rzeczywiście są związane z działalnością)</td><td><b>3 lata</b> — art. 118 KC</td></tr>
+<tr><td>Roszczenie stwierdzone prawomocnym orzeczeniem</td><td><b>6 lat</b> — art. 125 § 1 KC; <b>przyszłe świadczenia okresowe objęte orzeczeniem: 3 lata</b></td></tr>
+<tr><td>Koniec terminu</td><td>Zasadniczo <b>ostatni dzień roku kalendarzowego</b>, chyba że termin jest krótszy niż 2 lata</td></tr>
+<tr><td>Roszczenie przeciwko konsumentowi po przedawnieniu</td><td>Co do zasady nie można go dochodzić — sąd uwzględnia przedawnienie <b>z urzędu</b>, bez zarzutu pozwanego (art. 117 § 2¹ KC). Wyjątkowo, w szczególnych okolicznościach, sąd może jednak nie uwzględnić upływu terminu przedawnienia, po rozważeniu interesów stron (art. 117¹ § 1 KC).</td></tr>
+<tr><td>Roszczenie B2B / przeciwko przedsiębiorcy po przedawnieniu</td><td>Dłużnik musi podnieść zarzut przedawnienia — sąd nie bada go sam</td></tr>
+</table>
+<div class="box red"><h4>Uwaga: 6 lat przedawnienia ≠ 3 lata do EPU</h4><p>Nawet jeśli roszczenie jeszcze się nie przedawniło (np. pożyczka prywatna — 6 lat), do e-Sądu wejdzie tylko wtedy, gdy stało się wymagalne <b>nie dawniej niż 3 lata przed wniesieniem pozwu</b> (art. 505²⁹ᵃ KPC). Starsze roszczenie — od razu do zwykłego sądu rejonowego. Szczegóły w sekcji 7.</p></div>
+<div class="box amber"><p><b>Praktycznie:</b> jeżeli roszczenie związane z działalnością gospodarczą stało się wymagalne w 2023 r., jego trzyletni termin przedawnienia może zasadniczo upłynąć 31 grudnia 2026 r., o ile nie wystąpiły okoliczności wpływające na bieg przedawnienia (np. uznanie długu, przerwa, zawieszenie). Nie czekaj do grudnia. Wezwanie do zapłaty samo w sobie <b>nie przerywa</b> przedawnienia. Bieg przedawnienia przerywa się m.in. przez czynność przed sądem lub innym organem, przedsięwziętą bezpośrednio w celu dochodzenia, ustalenia, zaspokojenia lub zabezpieczenia roszczenia, oraz przez uznanie roszczenia przez dłużnika (art. 123 § 1 pkt 1–2 KC). <b>Wszczęcie mediacji nie przerywa przedawnienia:</b> bieg przedawnienia roszczeń objętych umową o mediację ulega zawieszeniu na czas trwania mediacji (art. 121 pkt 5 KC). Podobnie zawieszenie dotyczy roszczeń objętych wnioskiem o zawezwanie do próby ugodowej — na czas trwania postępowania pojednawczego (art. 121 pkt 6 KC). Uznanie roszczenia <b>nie musi mieć formy pisemnej</b> — forma pisemna ułatwia tylko jego wykazanie. Samo użycie słowa „ugoda” nie przesądza automatycznie o przerwaniu przedawnienia — skutek porozumienia lub ugody zależy od jej treści i okoliczności. Sprawdź swoją datę wymagalności przed złożeniem pozwu.</p></div>
+</section>
+
+<section id="koszty">
+<h2>10. Czy można doliczyć koszty papierowych listów poleconych?</h2>
+<p>Tak, można domagać się zwrotu poniesionych kosztów korespondencji, ale <b>nie oznacza to, że każda opłata pocztowa automatycznie zwiększa kwotę zasądzanego roszczenia</b>. <b>Samo wysłanie wezwania i poniesienie opłaty pocztowej nie tworzy automatycznie obowiązku zwrotu tych pieniędzy przez dłużnika.</b> Koszty wezwań do zapłaty nie są standardowo odzyskiwalne od przegrywającej firmy — trzeba wykazać podstawę i celowość każdego wydatku. Trzeba rozróżnić trzy sytuacje (oraz odrębną rekompensatę w transakcjach handlowych).</p>
+<div class="grid">
+<div class="box blue"><h4>A. Koszty jako część dochodzonego roszczenia</h4><p>Jeżeli poniosłeś konkretną szkodę majątkową, a wydatki na listy polecone były konieczne, uzasadnione i pozostają w związku z działaniem firmy, możesz próbować dochodzić ich zwrotu jako odrębnej należności. Trzeba jednak wykazać podstawę prawną takiego żądania.</p></div>
+<div class="box blue"><h4>B. Koszty jako koszty dochodzenia roszczenia</h4><p>Możesz wskazać poniesione koszty korespondencji i wnosić o ich zwrot w ramach kosztów procesu. Podstawą jest <b>art. 98 Kodeksu postępowania cywilnego</b>, który przewiduje zwrot niezbędnych kosztów celowego dochodzenia praw. Sąd oceni, czy konkretne wydatki podlegają zwrotowi. Zwykłe koszty wysyłania wezwań do zapłaty nie są automatycznie zasądzane jako koszty procesu.</p></div> <div class="box blue"><h4>C. Koszty czynności przedsądowych — odrębna kategoria</h4><p>Koszty wezwań, monitów i innych czynności przedsądowych to odrębna kategoria — nie są automatycznie ani kosztami procesu (art. 98 KPC), ani odszkodowaniem za dodatkową szkodę majątkową (kategoria A). Każdą z tych trzech kategorii rozliczasz osobno i dla każdej musisz wykazać własną podstawę prawną. <b>Samo wyodrębnienie tej kategorii nie tworzy roszczenia o zwrot — potrzebna jest odrębna podstawa prawna.</b></p></div>
+</div>
+<div class="box amber"><h4>Odrębne uprawnienie w transakcjach handlowych: rekompensata za koszty odzyskiwania należności</h4>
+<p>Jeżeli dochodzona należność wynika z transakcji handlowej objętej ustawą o przeciwdziałaniu nadmiernym opóźnieniom w transakcjach handlowych i wierzyciel nabył prawo do odsetek ustawowych za opóźnienie w transakcjach handlowych, może mu przysługiwać — <b>bez wezwania</b> — odrębna rekompensata za koszty odzyskiwania należności na podstawie art. 10 ustawy:</p>
+<ul>
+<li><b>40 EUR</b> — gdy wartość świadczenia pieniężnego nie przekracza 5 000 zł;</li>
+<li><b>70 EUR</b> — gdy wartość świadczenia jest wyższa niż 5 000 zł, ale niższa niż 50 000 zł;</li>
+<li><b>100 EUR</b> — gdy wartość świadczenia wynosi co najmniej 50 000 zł.</li>
+</ul>
+<p>Kwotę przelicza się na złote według średniego kursu euro NBP z ostatniego dnia roboczego miesiąca poprzedzającego miesiąc, w którym świadczenie pieniężne stało się wymagalne. W określonych przypadkach można dochodzić także uzasadnionych kosztów odzyskiwania należności przewyższających tę rekompensatę. To uprawnienie <b>nie jest zwrotem konkretnej opłaty za list polecony</b> i nie przysługuje automatycznie przy każdej zaległości, np. przy zwykłej pożyczce prywatnej lub długu konsumenta. Sprawdź przesłanki ustawy i nie dubluj tych samych kosztów.</p></div>
+<p><b>Praktyczna wskazówka:</b> decydują okoliczności konkretnej sprawy, a nie liczba wezwań. Jedno dobrze udokumentowane wezwanie z wyznaczonym terminem co do zasady wystarczy, żeby wykazać próbę polubownego rozwiązania sporu; serię identycznych wezwań w krótkim czasie sąd może uznać za niecelową. Nie należy więc zakładać, że wysłanie dwóch wezwań daje większą szansę odzyskania kosztów niż wysłanie jednego.</p>
+<h3>Co warto zachować?</h3>
+<ul>
+<li>potwierdzenia nadania listów poleconych,</li>
+<li>potwierdzenia odbioru,</li>
+<li>potwierdzenia opłat pocztowych,</li>
+<li>kopie wysłanych wezwań,</li>
+<li>odpowiedzi firmy,</li>
+<li>zestawienie dat i kosztów,</li>
+<li><mark class="hl">W e-Doręczeniach: dowód wysłania i dowód otrzymania pobrane z systemu — nie licz, że skrzynka będzie archiwum bezterminowo, pobieraj pliki.</mark></li>
+</ul>
+<h3>Przykład — policzony na cenach wg cennika z 1.03.2025 r. (przed nadaniem sprawdź aktualną taryfę — patrz źródła w sekcji 6)</h3>
+<table>
+<tr><th>Rodzaj korespondencji</th><th>Koszt — papier (wg cennika z 1.03.2025)</th><th>Koszt — e-Doręczenia</th></tr>
+<tr><td>Pierwsze wezwanie do zapłaty</td><td>11,80 zł — polecony ekonomiczny S + ZPO</td><td>Cena kwalifikowanej usługi RDE wg dostawcy — sprawdź cennik; 0 zł — PURDE do podmiotu publicznego</td></tr>
+<tr><td>Ponowne wezwanie</td><td>11,80 zł</td><td>Cena kwalifikowanej usługi RDE wg dostawcy</td></tr>
+<tr><td>Wezwanie przedsądowe</td><td>11,80 zł</td><td>Cena kwalifikowanej usługi RDE wg dostawcy</td></tr>
+<tr><td><b>Łącznie</b></td><td><b>35,40 zł</b></td><td><b>3 × cena kwalifikowanej usługi RDE wg dostawcy</b> (do firmy — nie da się podać jednej stawki)</td></tr>
+</table>
+<div class="box amber"><p><b>W pozwie warto wyraźnie oddzielić kwotę głównego długu od ewentualnych kosztów dodatkowych.</b> Nie dodawaj bezrefleksyjnie wszystkich kosztów korespondencji do kwoty głównej. Bezpieczniej rozdzielić poszczególne składniki i wskazać ich podstawę.</p></div>
+</section>
+
+<section id="kroki">
+<h2>11. Jak wygląda postępowanie przeciwko firmie — krok po kroku?</h2>
+<ol class="step">
+<li><b>Ustalenie kwoty zadłużenia.</b> Ustalasz: kwotę główną; ewentualne odsetki ustawowe za opóźnienie (stawki w sekcji 9); dodatkowe należności, jeżeli istnieje podstawa prawna ich dochodzenia.</li>
+<li><b>Wezwanie firmy do zapłaty.</b> Wysyłasz wezwanie do zapłaty, najlepiej listem poleconym za potwierdzeniem odbioru lub elektronicznie przez e-Doręczenia (do podmiotu publicznego: 0 zł przez PURDE; do firmy: cena kwalifikowanej usługi RDE wg dostawcy kwalifikowanego — sprawdź cennik). Wyznaczasz termin zapłaty, np. 7 dni lub 14 dni. Zachowujesz dowód wysłania / dowód otrzymania.</li>
+<li><b>Przygotowanie pozwu.</b> Zakładasz konto na stronie e-sądu i przygotowujesz: dane firmy; adres siedziby; NIP lub inne dane identyfikacyjne; wysokość roszczenia; uzasadnienie; wykaz dowodów; numer konta bankowego.</li>
+<li><b>Złożenie pozwu i opłacenie.</b> Wypełniasz elektroniczny formularz, podpisujesz pozew i płacisz opłatę sądową przez system. Pozew zostaje przekazany do sądu.</li>
+<li><b>Rozpoznanie sprawy.</b> Jeżeli sąd uzna, że roszczenie nie budzi wątpliwości, może wydać nakaz zapłaty. Nakaz jest doręczany zgodnie z zasadami doręczeń w postępowaniu cywilnym — co do zasady w formie papierowej.</li>
+<li><b>Reakcja firmy.</b> Firma może: zapłacić należność; nie wnieść sprzeciwu; wnieść sprzeciw i zakwestionować roszczenie.</li>
+<li><b>Egzekucja należności.</b> Jeżeli nakaz się uprawomocni, uzyskuje klauzulę wykonalności. Możesz wtedy złożyć wniosek o egzekucję do komornika.</li>
+</ol>
+<h3>Co się stanie, jeżeli firma wniesie sprzeciw?</h3>
+<ul>
+<li><b>Firma nie musi zgadzać się z nakazem zapłaty.</b> Sprzeciw wnosi w terminie <b>2 tygodni od doręczenia nakazu</b> (art. 505³⁵ KPC). Termin liczony jest w tygodniach: upływa w tym samym dniu tygodnia, w którym doręczono nakaz (np. doręczono w środę — termin upływa w środę za 2 tygodnie).</li>
+<li>Jeżeli skutecznie wniesie sprzeciw, <b>nakaz traci moc</b>, a postępowanie EPU zostaje <b>umorzone</b> w zakresie, w którym nakaz utracił moc.</li>
+<li><b>Nie oznacza to, że tracisz prawo do dochodzenia pieniędzy.</b> Możesz skierować sprawę do właściwego sądu w zwykłym postępowaniu cywilnym — wtedy przedstawiasz dokumenty i dowody: umowę, faktury, korespondencję i potwierdzenia nadania.</li>
+<li>Sprzeciw w EPU jest bezpłatny.</li>
+</ul>
+<div class="box amber"><h4>3 miesiące i zaliczenie opłaty</h4>
+<p>Po umorzeniu EPU sprawa <b>nie przenosi się automatycznie</b>. Jeżeli chcesz zachować skutki prawne pierwotnego wniesienia pozwu w EPU oraz zaliczyć uiszczoną opłatę, złóż pozew do sądu właściwego według przepisów KPC w terminie <b>3 miesięcy od dnia WYDANIA postanowienia o umorzeniu</b> (art. 505³⁷ § 2 KPC). Co do zasady będzie to sąd miejsca zamieszkania lub siedziby pozwanego, ale w niektórych sprawach możliwa jest właściwość innego sądu — np. z przepisów o właściwości przemiennej, wyłącznej lub szczególnych przepisów dotyczących danej sprawy. <b>Termin biegnie od wydania, a nie od doręczenia odpisu ani od uprawomocnienia.</b> Nie czekaj na papierowy odpis — sprawdź datę wydania postanowienia w systemie EPU i licz od niej. Jeśli zrobisz to w terminie, <b>opłata zapłacona w EPU zaliczana jest na poczet opłaty w zwykłym postępowaniu</b> — dopłacasz tylko różnicę do pełnej opłaty. Jeśli przegapisz 3 miesiące, możesz stracić to zaliczenie i efekt „ciągłości” sprawy. Dlatego przy sporach spornych lepiej od razu rozważyć zwykły sąd.</p></div>
+<h3>Klauzula wykonalności i komornik</h3>
+<ul>
+<li><b>Klauzula wykonalności</b> to sądowe poświadczenie, że nakaz / wyrok nadaje się do egzekucji. W EPU uzyskujesz ją w systemie, w zwykłym postępowaniu — na wniosek (wniosek o klauzulę dla orzeczenia sądu / nakazu zapłaty co do zasady bez odrębnej opłaty stałej 50 zł, która dotyczy innych tytułów — sprawdź pouczenie sądu, bo praktyka zależy od rodzaju tytułu).</li>
+<li><b>Komornik:</b> w sprawie o egzekucję świadczeń pieniężnych komornik ściąga od dłużnika <b>opłatę stosunkową 10% wartości wyegzekwowanego świadczenia</b>. Minimum zależy od sposobu egzekucji: <b>200 zł</b> — przy egzekucji wyłącznie z wierzytelności / rachunku / wynagrodzenia / świadczeń albo wpłacie do komornika po terminie miesięcznym, <b>300 zł</b> — w pozostałych przypadkach (art. 28 ust. 2 i 3 ustawy o kosztach komorniczych). <b>150 zł występuje w dwóch różnych rolach — nie myl ich:</b> (1) minimum opłaty przy stawce preferencyjnej 3%, gdy dłużnik spłaci w ciągu miesiąca (art. 28 ust. 1); (2) odrębna opłata 150 zł pobierana od wierzyciela przy umorzeniu egzekucji z innych przyczyn niż wskazane w art. 29 ust. 1, z wyjątkami z art. 30 (art. 29 ust. 4). <b>Wierzyciel nie płaci tych 10% z góry</b> — opłata obciąża dłużnika. Wierzyciel może być wezwany do zaliczki na wydatki (np. korespondencja, poszukiwanie majątku), ale nie do opłaty stosunkowej z góry.</li>
+<li>Do komornika potrzebujesz: tytułu wykonawczego (nakaz / wyrok z klauzulą), wniosku o wszczęcie egzekucji, danych dłużnika i — jeśli znasz — informacji o jego majątku / rachunkach / pracodawcy. To przyspiesza egzekucję.</li>
+</ul>
+</section>
+
+
+<section id="komornik">
+<h2>14. Komornik — koszty: co zapłaci dłużnik i ile kosztuje komornik</h2>
+<h3>Nakaz zapłaty — co musi zapłacić dłużnik?</h3>
+<p>Jeżeli sąd wyda nakaz zapłaty i uwzględni roszczenie, w nakazie powinien znaleźć się też obowiązek zwrotu kosztów procesu przez pozwanego (art. 98 KPC — strona przegrywająca zwraca stronie przeciwnej niezbędne koszty celowego dochodzenia praw). Dłużnik może zostać zobowiązany do zapłaty:</p>
+<ol><li><b>Należności głównej</b>, np. 10 000 zł.</li><li><b>Odsetek</b>, jeżeli zostały zasądzone.</li><li><b>Kosztów procesu</b>, np. opłaty sądowej, którą zapłaciłeś.</li><li><b>Ewentualnych kosztów zastępstwa procesowego</b>, jeżeli zostały zasądzone — tylko gdy byłeś reprezentowany przez pełnomocnika i wniosłeś o ich zasądzenie. Gdy działasz sam, bez pełnomocnika, kosztów zastępstwa nie ma.</li></ol>
+<p>To wszystko wynika z nakazu zapłaty i rozstrzygnięcia o kosztach w nim zawartego. Sprawdź w nakazie, co sąd przyznał — nie dopisuj kosztów „z głowy”.</p>
+<h3>Opłata komornicza — ile i kiedy mniej?</h3>
+<table>
+<tr><th>Kiedy</th><th>Kto płaci</th><th>Ile</th><th>Podstawa</th></tr>
+<tr><td>Komornik wyegzekwował świadczenie w zwykłym trybie</td><td><b>Dłużnik</b></td><td><b>10%</b> wartości wyegzekwowanego świadczenia</td><td>art. 27 ust. 1</td></tr>
+<tr><td>Dłużnik wpłacił <b>komornikowi</b> w ciągu <b>miesiąca</b> od doręczenia zawiadomienia o wszczęciu egzekucji</td><td><b>Dłużnik</b></td><td><b>3%</b> wartości wpłaconej w ten sposób</td><td>art. 27 ust. 2</td></tr>
+<tr><td>Opłata z art. 27 byłaby niższa niż minimum — wpłata w trybie z art. 27 ust. 2</td><td><b>Dłużnik</b></td><td>Minimum <b>150 zł</b></td><td>art. 28 ust. 1</td></tr>
+<tr><td>Opłata byłaby niższa niż minimum, a wyegzekwowano wyłącznie z wierzytelności, rachunku bankowego, wynagrodzenia lub świadczeń z zabezpieczenia społecznego albo dłużnik wpłacił komornikowi po terminie miesięcznym</td><td><b>Dłużnik</b></td><td>Minimum <b>200 zł</b></td><td>art. 28 ust. 2</td></tr>
+<tr><td>Opłata byłaby niższa niż minimum, a wyegzekwowano w inny sposób</td><td><b>Dłużnik</b></td><td>Minimum <b>300 zł</b></td><td>art. 28 ust. 3</td></tr>
+<tr><td style="background:#ffedd5">Umorzenie na wniosek wierzyciela albo na podstawie art. 824 § 1 pkt 4 KPC (bezczynność 6 mies.), a opłata z art. 29 ust. 1 byłaby niższa niż minimum.<br><br><b>Trzy przypadki — art. 29 ust. 1:</b> (1) umorzenie <b>nie</b> wiąże się ze spłatą przez dłużnika ani z porozumieniem — np. wycofujesz egzekucję, bo zmieniłeś zdanie, albo nie dokonujesz czynności potrzebnej do dalszego prowadzenia egzekucji: <b>5% płaci wierzyciel</b>; (2) wierzyciel wykaże, że przyczyna umorzenia wiąże się ze spełnieniem świadczenia przez dłużnika <b>w ciągu miesiąca</b> od doręczenia dłużnikowi zawiadomienia o wszczęciu egzekucji albo z zawarciem w tym terminie porozumienia: <b>5% płaci dłużnik</b>; (3) spełnienie świadczenia lub zawarcie porozumienia nastąpiło <b>po upływie miesiąca</b> od doręczenia zawiadomienia: <b>10% płaci dłużnik</b>.<br><br><b>Dlaczego:</b> bo to Ty kończysz egzekucję bez zaspokojenia, więc ustawodawca obciąża Ciebie 5% świadczenia pozostałego do wyegzekwowania, a art. 28 ust. 4 ustala, że nie mniej niż 200 zł.</td><td style="background:#ffedd5"><b>Wierzyciel</b> — 5%, gdy umorzenie nie wiąże się ze spłatą / porozumieniem.<br><br><b>Dłużnik</b> — 5%, gdy wierzyciel wykaże spłatę / porozumienie w ciągu miesiąca od doręczenia zawiadomienia; <b>10%</b>, gdy spłata / porozumienie nastąpiły po upływie miesiąca.</td><td style="background:#ffedd5">Minimum <b>200 zł</b></td><td style="background:#ffedd5">art. 28 ust. 4 w zw. z art. 29 ust. 1</td></tr>
+<tr><td>Limit w jednej sprawie</td><td>— (to limit, nie osobna opłata)</td><td>Opłaty stosunkowe nie mniej niż <b>150 zł</b> i nie więcej niż <b>50 000 zł</b></td><td>art. 25 ust. 1</td></tr>
+</table>
+<p>W tej tabeli płaci <b>dłużnik</b>, z wyjątkiem wiersza z art. 29 ust. 1 — tam kto płaci zależy od momentu spłaty / porozumienia. Wierzyciel nie płaci tej opłaty z góry.</p>
+<div class="box red">
+<h3 style="color:#8a1414;margin-top:0">Koszty dla wierzyciela — 4 sytuacje, w których płacisz Ty</h3>
+<p>To są sytuacje, w których opłata nie idzie na dłużnika „automatycznie”. W trzech z czterech płacisz Ty, chyba że spłata / porozumienie przeniesie opłatę na dłużnika. Tylko wycofanie przed zawiadomieniem jest tanie.</p>
+<table>
+<tr><th>Sytuacja</th><th>Ile płacisz</th><th>Dlaczego</th></tr>
+<tr><td><b>1. Komornik nie znajduje majątku dłużnika</b><br>Umorzenie z urzędu na podstawie art. 824 § 1 pkt 3 KPC — bo oczywiste, że z egzekucji nie uzyska się sumy wyższej od kosztów egzekucyjnych.</td><td><b>150 zł</b><br>pomniejszone o opłaty już ściągnięte od dłużnika.<br><br>Do tego mogą dojść niepokryte, rzeczywiste wydatki komornika (art. 7 ust. 6), jeśli zaliczki nie wystarczyły.</td><td>To <b>nie</b> jest przypadek z art. 29 ust. 1, tylko z art. 29 ust. 4. Komornik i tak wykonał czynności, a nie ma z czego ściągnąć opłaty od dłużnika, więc obciąża Ciebie.<br><br><b>Ważne zwolnienia — sprawdź, czy Cię dotyczą:</b> tej opłaty 150 zł <b>nie pobiera się</b> m.in. od osób fizycznych dochodzących roszczeń pracowniczych lub odszkodowawczych (art. 29 ust. 5 pkt 1) oraz od jednostek samorządu terytorialnego (pkt 2). <b>Zakres pkt 3 wymaga ostrożnej oceny.</b> W uzasadnieniu uchwały SN III CZP 30/24 z 15.01.2025 r. Sąd Najwyższy wskazał, że art. 29 ust. 5 pkt 3 u.k.k. nie jest ograniczony wyłącznie do podmiotów prowadzących działalność gospodarczą. Przepis rozróżnia podmioty, których przedmiotem działalności nie jest działalność finansowa i ubezpieczeniowa (lit. a), oraz podmioty prowadzące taką działalność (lit. b), dla których przewidziano dodatkowy warunek bycia wierzycielem pierwotnym i nieobrotowego charakteru wierzytelności. <b>Nie należy jednak przedstawiać tej uchwały jako automatycznej gwarancji zwolnienia każdego wierzyciela.</b> Pytanie prawne i sentencja dotyczyły ZUS; w innych sprawach trzeba ocenić status wierzyciela, charakter jego działalności, rodzaj wierzytelności i termin wszczęcia egzekucji. Jeżeli komornik obciąży Cię opłatą 150 zł, sprawdź podstawę i uzasadnienie postanowienia oraz termin zaskarżenia; w razie wątpliwości skonsultuj sprawę z prawnikiem.<br><br>Umorzenie nie kasuje długu — możesz wszcząć egzekucję ponownie, gdy dłużnik nabędzie majątek.</td></tr>
+<tr><td><b>2. Sam wycofujesz egzekucję po doręczeniu zawiadomienia dłużnikowi</b></td><td><b>5%</b> świadczenia pozostałego, minimum <b>200 zł</b> (art. 28 ust. 4).</td><td>Bo Ty kończysz postępowanie, które już wystartowało wobec dłużnika (art. 29 ust. 1).<br><br><b>Wyjątek:</b> jeśli wycofujesz, bo dłużnik zapłacił Ci <b>w ciągu miesiąca</b> albo zawarłeś porozumienie w tym terminie i to wykażesz — <b>5% płaci dłużnik</b>. Po miesiącu — <b>dłużnik płaci 10%</b>.</td></tr>
+<tr><td><b>3. Wycofujesz egzekucję przed doręczeniem zawiadomienia dłużnikowi</b></td><td><b>100 zł</b> — stała kwota, nie 5% i nie minimum 200 zł.</td><td>Bo postępowanie praktycznie się nie rozpoczęło wobec dłużnika (art. 29 ust. 2). To najtańsze wycofanie. Płaci wierzyciel, bo to Twój wniosek.</td></tr>
+<tr><td><b>4. Egzekucja umorzona, bo przez 6 miesięcy nie dokonałeś czynności potrzebnej do dalszego prowadzenia egzekucji albo nie zażądałeś podjęcia zawieszonego postępowania</b><br>Umorzenie z urzędu na podstawie art. 824 § 1 pkt 4 KPC — nie chodzi o każdą „ciszę” czy brak kontaktu, tylko o brak tej konkretnej czynności / żądania.</td><td><b>5%</b> świadczenia pozostałego, minimum <b>200 zł</b> — w określonych przypadkach; jeśli przyczyna umorzenia wiąże się ze spłatą / porozumieniem, opłata może obciążyć dłużnika (5% w ciągu miesiąca, 10% po miesiącu — patrz wiersz art. 29 ust. 1 w tabeli powyżej).</td><td>Bo bezczynność traktowana jest jak zakończenie postępowania przez wierzyciela — ten sam art. 29 ust. 1.<br><br><b>Jak tego uniknąć:</b> odpisuj na wezwania komornika, wpłacaj zaliczki na wskazane czynności, wnioskuj o kolejne czynności.</td></tr>
+</table>
+</div>
+<h3>Czy komornik odlicza swoje 10% od Twoich pieniędzy?</h3>
+<p><b>Nie.</b> Opłata komornicza to <b>dodatkowy koszt dłużnika</b>, a nie pomniejszenie zasądzonej należności wierzyciela. Komornik ściąga ją <b>wraz z egzekwowanym świadczeniem, proporcjonalnie</b> do wyegzekwowanej kwoty (art. 21 ust. 1).</p>
+<h3>Co się dzieje, jeżeli dłużnik zapłaci bezpośrednio Tobie?</h3>
+<ul>
+<li><b>Art. 27 ust. 3:</b> kwota wpłacona przez dłużnika <b>bezpośrednio wierzycielowi nie stanowi wyegzekwowanego świadczenia</b> przez komornika.</li>
+<li><b>Nie oznacza to automatycznie, że nie będzie żadnych opłat.</b> Przy umorzeniu na wniosek wierzyciela / na podstawie art. 824 § 1 pkt 4 KPC w grę wchodzi <b>art. 29</b>: co do zasady wierzyciela obciąża opłata <b>5%</b> pozostałego świadczenia.</li>
+<li><b>Spłata / porozumienie w ciągu miesiąca:</b> opłata <b>5%</b> obciąża <b>dłużnika</b>. <b>Po miesiącu:</b> dłużnika obciąża opłata <b>10%</b>.</li>
+<li><b>Wniosek przed zawiadomieniem dłużnika:</b> opłata <b>100 zł</b> (art. 29 ust. 2).</li>
+<li><b>Umorzenie z innych przyczyn:</b> komornik pobiera od wierzyciela <b>150 zł</b>, z wyjątkami (art. 29 ust. 4–5).</li>
+<li><b>Art. 30:</b> przy oczywiście niecelowym wszczęciu egzekucji lub wskazaniu osoby niebędącej dłużnikiem wierzyciela obciąża opłata <b>10%</b> egzekwowanego świadczenia, a od dłużnika się nie ściąga.</li>
+</ul>
+<div class="box amber"><p><b>Co zrobić w praktyce:</b> gdy dłużnik zapłaci Ci bezpośrednio — niezwłocznie, na piśmie, poinformuj komornika o spłacie i dołącz dowód zapłaty. Nie zakładaj, że „skoro zapłacił mi, to komornik nic nie policzy”. Od momentu zapłaty oraz możliwości jej wykazania zależy, kogo obciąży opłata z art. 29 ust. 1 — 5% albo 10% (5% na dłużniku, gdy spłata / porozumienie w ciągu miesiąca od doręczenia zawiadomienia; 10% na dłużniku, gdy po upływie miesiąca; 5% na Tobie, gdy umorzenie nie wiąże się ze spłatą / porozumieniem).</p></div>
+<p>Przykład: dłużnik dostał zawiadomienie, potem zapłacił Tobie, Ty informujesz komornika i wnosisz o zakończenie — w zależności od momentu spłaty i tego, co wykażesz, zastosowanie ma art. 29 ust. 1 (5% albo 10% na dłużniku) albo art. 29 ust. 4 (150 zł na wierzycielu przy umorzeniu z innych przyczyn).</p>
+<h3>Czy wierzyciel musi coś zapłacić komornikowi z góry?</h3>
+<p><b>Nie ma obowiązkowej prowizji ani obowiązkowej zaliczki na samo wszczęcie egzekucji świadczeń pieniężnych.</b> Możesz zostać wezwany do wpłacenia <b>zaliczki na konkretne wydatki</b> (art. 7), np. korespondencję — do <b>60 zł</b> na start (art. 7 ust. 2), zapytania, poszukiwanie majątku. To nie jest limit na całą sprawę: jednorazowa zaliczka nie może przekroczyć 60 zł, chyba że planowane wydatki znacznie przekroczą tę kwotę, a gdy zaliczka się wyczerpie, komornik może wezwać do brakującej / kolejnej zaliczki (art. 7 ust. 2 i ust. 5).</p>
+<p>Termin zapłaty zaliczki <b>nie może być krótszy niż 7 dni</b> (art. 7 ust. 4). W wezwaniu komornik musi wskazać: kto ma zapłacić, ile, w jakim terminie, na jaką czynność i jakie są skutki niewykonania wezwania. Zaliczkę rozlicza w terminie miesiąca i zwraca niewykorzystaną część. Brak zaliczki na czynność, od której komornik ją uzależnił, oznacza, że czynność nie zostanie wykonana — ale nie zwalnia automatycznie z wydatków już poniesionych i niezbędnych w postępowaniu; te rozlicza się odrębnie.</p>
+<h3>Niepokryte wydatki — czy musisz się na nie zgadzać? Co jeśli się nie zgodzisz?</h3>
+<p><b>Krótka odpowiedź: to zależy, czy to wydatek na czynność, którą Ty zlecasz, czy wydatek już poniesiony i niezbędny w toku egzekucji.</b></p>
+<ul>
+<li><b>1. Czynność, którą Ty zlecasz — nie musisz się zgadzać.</b> Komornik uzależnia jej dokonanie od zaliczki (art. 7 ust. 1). <b>Nie wpłacasz zaliczki = czynność nie jest wykonywana.</b> Ale egzekucja może stanąć, a jeżeli przez 6 miesięcy nie dokonasz czynności potrzebnej do dalszego prowadzenia egzekucji albo nie zażądasz podjęcia zawieszonego postępowania, może dojść do umorzenia na podstawie art. 824 § 1 pkt 4 KPC — w określonych przypadkach z opłatą 5%, nie mniej niż 200 zł (art. 29 ust. 1 w zw. z art. 28 ust. 4).</li>
+<li><b>2. Zaliczka nie wystarczyła, a czynność już wykonana.</b> Komornik tymczasowo ponosi wydatek, potem może wydać postanowienie o pobraniu brakującej zaliczki od Ciebie albo ściągnąć od dłużnika (art. 7 ust. 5). Postanowienie musi zawierać szczegółowe wyliczenie, sposób obliczenia, czynność i podstawę prawną (art. 3 ust. 2).</li>
+<li><b>3. Egzekucja bezskuteczna.</b> Komornik wydaje postanowienie o pobraniu od wierzyciela niepokrytych wydatków (art. 7 ust. 6). Samo „nie zgadzam się” tego nie zatrzyma — trzeba zaskarżyć postanowienie. Niezapłacone postanowienie: wezwanie do zapłaty w terminie 7 dni pod rygorem wszczęcia egzekucji (art. 3 ust. 1), a prawomocne postanowienie podlega wykonaniu bez klauzuli (art. 4).</li>
+</ul>
+<div class="box amber"><h4>Co zrobić zamiast odmawiać w ciemno?</h4>
+<ul>
+<li>Przed zgodą zapytaj na piśmie: <b>jaka czynność, po co, jaki przewidywany koszt, czy jest niezbędna, czy da się taniej?</b></li>
+<li>Zgadzaj się tylko na <b>konkretną kwotę i konkretną czynność</b>. Przeniesienie zaliczki na inną czynność wymaga Twojej zgody (art. 9 ust. 2).</li>
+<li>Sprawdzaj każde pismo — komornik musi informować o saldzie zaliczek i kosztów (art. 16 ust. 4).</li>
+<li>Jeśli wydatek nie był niezbędny / jest zawyżony — <b>czytaj pouczenie i działaj w terminie 7 dni</b>: skarga na czynności komornika do sądu rejonowego (art. 767 KPC).</li>
+<li>Jeśli nie stać Cię bez uszczerbku dla utrzymania — wniosek do sądu rejonowego o zwolnienie od kosztów komorniczych (art. 45 ust. 3). Rozstrzyga sąd, nie komornik.</li>
+<li>Uwaga na wybór komornika spoza rewiru: diety / przejazdy / noclegi obciążają Ciebie nawet przy zwolnieniu (art. 8).</li>
+</ul></div>
+
+<div class="box green">
+<h3 style="margin-top:0">Jak się zabezpieczyć — zacząć egzekucję tak, żebyś zyskał, a nie utrzymywał komornika</h3>
+<p><b>Zasada:</b> podstawowe opłaty egzekucyjne obciążają dłużnika, ale w określonych ustawowo przypadkach wierzyciel może ponosić opłaty i wydatki komornicze — np. gdy sam zlecisz mu drogie czynności albo zgodzisz się na wydatki bez limitu. Nie ma „comiesięcznego utrzymywania komornika”. <b>Wierzyciel nie ponosi automatycznie wszystkich kosztów egzekucji. Może jednak zostać obciążony zaliczkami na wydatki, niepokrytymi niezbędnymi wydatkami oraz opłatami w przypadkach przewidzianych ustawą.</b></p>
+<p><b>Krok 0 — zanim złożysz wniosek, sprawdź, czy jest z czego ściągnąć.</b> Czy firma jest aktywna w KRS / CEIDG, czy nie jest w likwidacji / upadłości? Czy znasz jej rachunek bankowy (z faktury / przelewu), pracodawcę, adres? Jeśli nie masz żadnej informacji, a dług jest mały — rozważ najpierw ugodę / wezwanie, a nie egzekucję w ciemno. Jeżeli egzekucja okaże się bezskuteczna, może dojść do umorzenia i rozliczenia kosztów. <b>Nie zakładaj jednak automatycznie, że zapłacisz 150 zł:</b> opłata z art. 29 ust. 4 ustawy o kosztach komorniczych ma ustawowe wyjątki. W art. 29 ust. 5 pkt 3 zwolnienie zależy m.in. od tego, czy wierzyciel mieści się w kategorii z lit. a albo lit. b oraz czy egzekucję wszczęto przed upływem 2 lat od powstania tytułu egzekucyjnego. W uzasadnieniu III CZP 30/24 SN wskazał, że przepis nie jest ograniczony wyłącznie do podmiotów prowadzących działalność gospodarczą, ale uchwała rozstrzygała sprawę ZUS i nie gwarantuje automatycznego zwolnienia każdego wierzyciela. Jeśli komornik naliczy 150 zł, sprawdź uzasadnienie i termin zaskarżenia; rozważ konsultację prawną. Mogą natomiast pozostać do rozliczenia niepokryte, niezbędne wydatki komornika. Szczegóły i wyjątki — w tabeli kosztów poniżej.</p>
+<p><b>Krok 1 — wybierz komornika z rewiru dłużnika.</b> Masz prawo wyboru komornika, ale jeśli wybierzesz spoza rewiru, diety, przejazdy i noclegi obciążą Ciebie nawet przy zwolnieniu od kosztów (art. 8). Co do zasady najtaniej: komornik z rewiru dłużnika — ale właściwość komornika i koszty czynności trzeba oceniać z uwzględnieniem wyjątków ustawowych i rodzaju czynności; wybór spoza rewiru może być w konkretnej sprawie dopuszczalny, a jego koszty — inne niż w standardowym przypadku.</p>
+<p><b>Krok 2 — we wniosku wskaż tylko tanie sposoby.</b> To najważniejszy punkt. Wniosek bez wskazania sposobu co do zasady umożliwia egzekucję według wszystkich dopuszczalnych sposobów, z wyjątkiem nieruchomości (art. 799 § 1 KPC). W praktyce traktuj to jako zgodę na szeroki zakres czynności — ale nie jako gwarancję, że komornik wykona każdą czynność ani że koszty będą takie same w każdej sprawie. Dlatego wskaż wyraźnie tylko te sposoby, których naprawdę chcesz. Wskaż wyraźnie tylko: <b>1) rachunek bankowy, 2) wynagrodzenie / wierzytelności</b>. Dopiero jak to nie zadziała, rozszerzysz wniosek — osobną decyzją, a nie z automatu.</p>
+<p><b>Krok 3 — nie zlecaj z automatu poszukiwania majątku ani wyjawienia majątku.</b> Poszukiwanie majątku na Twoje zlecenie to opłata stała <b>100 zł</b> (art. 44 ustawy o kosztach komorniczych) plus wydatki na zapytania. Zlecaj je tylko wtedy, gdy nie masz żadnej informacji o majątku, a dług jest na tyle duży, że 100 zł + zapytania się opłacą. Wyjawienie majątku (art. 913 KPC) to osobna, kosztowna procedura — nie na start.</p>
+<p><b>Krok 4 — nie zlecaj na starcie egzekucji z ruchomości ani z nieruchomości.</b> To najdroższe sposoby: transport, przechowywanie, biegły, ogłoszenia, licytacja. Przy długu np. 10 000 zł licytacja nieruchomości to przerost. Ruchomości / nieruchomość — tylko wtedy, gdy wiesz, że dłużnik ma konkretny, wartościowy składnik i bank / pensja nie wystarczyły.</p>
+<p><b>Krok 5 — dopisz do wniosku klauzulę kontrolną.</b> Skopiuj do wniosku:</p>
+<p><i>„Wnoszę o egzekucję wyłącznie z: 1) rachunku bankowego dłużnika, 2) wynagrodzenia / innych wierzytelności. Nie wnoszę o egzekucję z nieruchomości ani z ruchomości. Nie zlecam poszukiwania majątku. Proszę o uprzednie pisemne poinformowanie mnie o każdej czynności powodującej wydatki powyżej 60 zł i wstrzymanie się z nią do mojej pisemnej zgody, z wyjątkiem korespondencji. Próg 60 zł dotyczy zaliczki na koszty doręczenia korespondencji (art. 7 ust. 2 ustawy o kosztach komorniczych) i nie jest ogólnym limitem wszystkich zaliczek i wydatków — niniejsza klauzula nie ustanawia wiążącego limitu ustawowych kosztów komorniczych.”</i></p>
+<p>To nie blokuje czynności, do których komornik jest zobowiązany z urzędu, ale daje Ci kontrolę nad czynnościami dodatkowymi — a komornik i tak musi uzależnić czynność powodującą wydatki od zaliczki (art. 7 ust. 1). Pamiętaj: art. 7 ust. 2 dotyczy wyłącznie zaliczki na koszty doręczenia korespondencji — co do zasady jednorazowo nie może ona przekroczyć 60 zł, chyba że planowane wydatki znacznie przekroczą tę kwotę. Nie jest to ogólny limit wszystkich zaliczek i wydatków w egzekucji.</p>
+<p><b>Krok 6 — zaliczki: płać tylko za konkretną czynność.</b> Każde wezwanie sprawdź: czy zawiera to, co wymaga art. 7 ust. 3 (kto, ile, termin, jaka czynność, skutki)? Jeśli nie — dopytaj na piśmie. Nie płać „na zapas” ani „na poczet przyszłych czynności”. Zaliczka jest tylko na tę czynność, na którą została pobrana.</p>
+<p><b>Krok 7 — pilnuj terminów, nie dopuść do bezczynności.</b> Odpowiadaj niezwłocznie i pilnuj terminu wskazanego w konkretnym wezwaniu — to nie jest uniwersalny termin 7–14 dni na każde pismo komornika. Termin na uiszczenie zaliczki nie może być krótszy niż 7 dni od doręczenia wezwania (art. 7 ust. 4 ustawy o kosztach komorniczych), ale inne pisma mogą mieć inne terminy. Prowadź prostą tabelkę: data, na co zaliczka, ile, czy rozliczona. Jeśli nie wiesz, co robić — zapytaj komornika na piśmie, co jest potrzebne. Jeżeli przez 6 miesięcy nie dokonasz czynności potrzebnej do dalszego prowadzenia egzekucji albo nie zażądasz podjęcia zawieszonego postępowania, może dojść do umorzenia na podstawie art. 824 § 1 pkt 4 KPC — w określonych przypadkach z opłatą 5%, nie mniej niż 200 zł.</p>
+<p><b>Krok 8 — jak dłużnik zapłaci Tobie bezpośrednio, od razu powiadom komornika.</b> Jeżeli dłużnik zapłaci bezpośrednio Tobie, niezwłocznie poinformuj komornika na piśmie i dołącz dowód zapłaty. Od momentu zapłaty oraz możliwości jej wykazania zależy, kogo obciąży opłata z art. 29 ust. 1 — 5% albo 10%. Po upływie miesiąca od doręczenia zawiadomienia może chodzić o 10% obciążające dłużnika, a nie o 5% na Tobie — decydujący jest moment zapłaty / zawarcia porozumienia oraz wykazanie tych okoliczności komornikowi. Najlepiej: od razu po wszczęciu egzekucji powiedz dłużnikowi, żeby wpłacał na rachunek komornika, nie Tobie — wtedy opłata 3% (wpłata do komornika w ciągu miesiąca) zamiast 10% też zachęca go do szybkiej zapłaty.</p>
+<p><b>Krok 9 — jak egzekucja bezskuteczna, nie dopłacaj w kółko.</b> Nie zlecaj kolejnych poszukiwań co kilka miesięcy. Pozwól umorzyć na podstawie art. 824 § 1 pkt 3 KPC (150 zł — patrz pełne zwolnienia poniżej). Opłaty 150 zł z art. 29 ust. 4 nie pobiera się m.in. od osób fizycznych dochodzących roszczeń pracowniczych lub odszkodowawczych (art. 29 ust. 5 pkt 1), od jednostek samorządu terytorialnego (pkt 2) oraz — na podstawie art. 29 ust. 5 pkt 3 — w przypadku wierzycieli mieszczących się w kategoriach określonych w lit. a albo lit. b, jeżeli egzekucję wszczęto przed upływem 2 lat od powstania tytułu egzekucyjnego. W uzasadnieniu III CZP 30/24 z 15.01.2025 r. SN wskazał, że pkt 3 nie ogranicza się wyłącznie do podmiotów prowadzących działalność gospodarczą. Uchwała rozstrzygała jednak konkretną sprawę ZUS, dlatego nie przesądza automatycznie o zwolnieniu każdej osoby prywatnej lub każdego przedsiębiorcy. Trzeba ocenić przesłanki lit. a albo lit. b, w tym charakter działalności wierzyciela, ewentualny obrót wierzytelnością i termin wszczęcia egzekucji. Jeśli komornik obciąży Cię 150 zł, sprawdź uzasadnienie i termin zaskarżenia; rozważ konsultację prawną. Zachowaj tytuł wykonawczy — roszczenie stwierdzone prawomocnym orzeczeniem przedawnia się co do zasady po <b>6 latach</b> (art. 125 § 1 KC). <b>Wyjątek:</b> objęte orzeczeniem przyszłe świadczenia okresowe przedawniają się po <b>3 latach</b>. Wróć z nowym wnioskiem, gdy dłużnik dostanie pracę / majątek — z gotową informacją, od czego zacząć.</p>
+<p><b>Krok 10 — jak nie stać Cię na zaliczki, wnioskuj o zwolnienie zawczasu.</b> Zwolnienie od kosztów sądowych z postępowania rozpoznawczego rozciąga się na koszty komornicze (art. 45 ust. 1). Jeśli go nie masz, a nie jesteś w stanie ponieść wydatków bez uszczerbku dla utrzymania — wniosek do sądu rejonowego o zwolnienie w całości lub części (art. 45 ust. 3). Złóż go <b>przed</b> wpłaceniem zaliczek, nie po.</p>
+</div>
+
+<div class="box amber"><h4>Czego NIE klikać / NIE zaznaczać w formularzu wniosku</h4>
+<ul>
+<li>☐ „Wszystkie sposoby egzekucji” — to zgoda na wszystko poza nieruchomością.</li>
+<li>☐ „Poszukiwanie majątku” z automatu — tylko gdy brak informacji i dług to uzasadnia (100 zł + zapytania).</li>
+<li>☐ „Egzekucja z nieruchomości” na starcie — najdroższa, tylko przy dużym długu i znanej nieruchomości.</li>
+<li>☐ „Egzekucja z ruchomości” na starcie — transport, przechowywanie, biegły.</li>
+<li>☐ „Wyjawienie majątku” na starcie — osobna kosztowna procedura.</li>
+<li>☐ Komornik spoza rewiru dłużnika — diety / przejazdy na Twój koszt (art. 8).</li>
+</ul>
+<p><b>Ile możesz stracić, trzymając się tego planu?</b> <b>Uwaga: poniższe kwoty to przykłady dla opisanej, standardowej sytuacji — nie gwarancja maksymalnych wydatków wierzyciela. 60 zł to zaliczka na korespondencję na start, a nie limit całkowitego kosztu egzekucji</b> — jeśli komornik wezwie do uzupełnienia zaliczki albo pojawią się niepokryte wydatki, koszt rośnie. W tym planie: 0 zł z góry za wszczęcie, do 60 zł na start za korespondencję (z możliwością wezwania do uzupełnienia w razie wyczerpania), 0 zł za poszukiwanie majątku (bo go nie zlecasz), a przy bezskutecznej egzekucji — potencjalnie 150 zł z art. 29 ust. 4, chyba że w konkretnej sprawie przysługuje ustawowe zwolnienie. Zwolnienie z art. 29 ust. 5 pkt 3 wymaga spełnienia warunków lit. a albo lit. b oraz wszczęcia egzekucji przed upływem 2 lat od powstania tytułu. SN w III CZP 30/24 wskazał, że przepis nie jest ograniczony wyłącznie do podmiotów prowadzących działalność gospodarczą, ale rozstrzygnięcie dotyczyło ZUS i nie gwarantuje automatycznego zwolnienia każdego wierzyciela. Odrębne zwolnienia dotyczą m.in. osób fizycznych dochodzących roszczeń pracowniczych / odszkodowawczych (pkt 1) oraz JST (pkt 2) + ewentualne niepokryte, niezbędne wydatki za zapytania / korespondencję. To nie musi oznaczać tysięcy, ale nie oznacza też, że egzekucja jest pozbawiona ryzyka finansowego: koszty mogą powstać też przy standardowym postępowaniu — np. niepokryte wydatki, czynności poza rewirem komornika, dodatkowe zaliczki. Tysiące biorą się najczęściej z nieruchomości, ruchomości, biegłych i poszukiwań zlecanych „w pakiecie”.</p></div>
+
+<h3>Jak ograniczyć ryzyko finansowe?</h3>
+<ol>
+<li>Nie zlecaj od razu dodatkowych, kosztownych czynności, jeśli nie są potrzebne.</li>
+<li>Zacznij od standardowej egzekucji z rachunków bankowych, wynagrodzenia i innych dostępnych źródeł.</li>
+<li>Jeżeli komornik zażąda zaliczki, sprawdź, na jaką konkretnie czynność.</li>
+<li>Nie zgadzaj się automatycznie na dodatkowe, kosztowne wydatki bez poznania ich celu.</li>
+</ol>
+<p>Wniosek o poszukiwanie majątku dłużnika jest odrębną czynnością i może wiązać się z osobnym kosztem — nie zamawiaj go „w pakiecie”, jeśli nie musisz.</p>
+<h3>Najważniejsze podsumowanie — osoba prywatna po wygranym e-sądzie</h3>
+<ul>
+<li><b>0 zł</b> — obowiązkowej prowizji dla komornika z góry.</li>
+<li><b>0 zł</b> — obowiązkowej zaliczki na samo wszczęcie egzekucji.</li>
+<li><b>Do 60 zł</b> — standardowej zaliczki na korespondencję na start, z możliwością wezwania do uzupełnienia w razie wyczerpania i z ustawowym wyjątkiem (art. 7 ust. 2 i ust. 5).</li>
+<li><b>150 zł</b> — opłaty w przypadku umorzenia z innych przyczyn niż w art. 29 ust. 1 (art. 29 ust. 4). Zwolnienia: art. 29 ust. 5 — pkt 1 (osoby fizyczne: roszczenia pracownicze / odszkodowawcze), pkt 2 (JST) oraz pkt 3 (zwolnienie wymaga spełnienia warunków lit. a albo lit. b oraz wszczęcia egzekucji przed upływem 2 lat; SN w III CZP 30/24 wskazał, że przepis nie jest ograniczony wyłącznie do podmiotów prowadzących działalność gospodarczą, ale rozstrzygnięcie dotyczyło ZUS i nie gwarantuje automatycznego zwolnienia każdego wierzyciela; w razie naliczenia opłaty sprawdź uzasadnienie i termin zaskarżenia). Po upływie 2 lat od powstania tytułu opłata co do zasady będzie do zapłaty (chyba że dotyczy Cię pkt 1 lub pkt 2).</li>
+<li>Dodatkowo możliwe są <b>niepokryte, rzeczywiste wydatki</b> komornika — <b>nie musisz zgadzać się na każdą dodatkową czynność</b> (bez zaliczki czynność nie jest wykonywana), ale wydatków już poniesionych i niezbędnych nie „odmówisz” samą odmową — trzeba zaskarżyć postanowienie. Patrz wyżej: „Niepokryte wydatki — czy musisz się na nie zgadzać?”.</li>
+</ul>
+<p class="small">Podstawy: ustawa o kosztach komorniczych — art. 3, 4, 7, 8, 9, 16, 21, 25, 27–30, 44, 45; Kodeks postępowania cywilnego — art. 98, 767, 799, 801², 824, 913; Kodeks cywilny — art. 125.</p>
+</section>
+
+<section id="dokumenty">
+<h2>12. Jakie dokumenty przygotować do sporu z firmą?</h2>
+<p>Najlepiej zgromadzić całą dokumentację w jednym miejscu. W EPU dokumentów nie dołącza się do pozwu, ale trzeba wskazać dowody i opisać, jakie okoliczności potwierdzają.</p>
+<table>
+<tr><th>Dokument</th><th>Do czego służy</th></tr>
+<tr><td>Umowa lub zamówienie</td><td>Potwierdza zobowiązanie</td></tr>
+<tr><td>Faktury lub rachunki</td><td>Potwierdzają kwoty</td></tr>
+<tr><td>Potwierdzenia przelewów</td><td>Potwierdzają zapłatę</td></tr>
+<tr><td>Reklamacja</td><td>Pokazuje zgłoszenie problemu</td></tr>
+<tr><td>Odpowiedzi firmy</td><td>Potwierdzają stanowisko przedsiębiorcy</td></tr>
+<tr><td>Wezwania do zapłaty</td><td>Potwierdzają próby polubownego rozwiązania sporu</td></tr>
+<tr><td>Potwierdzenia nadania listów / dowody e-Doręczeń</td><td>Potwierdzają wysłanie i doręczenie korespondencji</td></tr>
+<tr><td>Kalkulacja roszczenia</td><td>Pokazuje, jak wyliczono żądaną kwotę (kwota główna + odsetki + koszty, osobno)</td></tr>
+</table>
+<h3>Co powinno znaleźć się w żądaniu pozwu?</h3>
+<ol>
+<li>Zasądzenie od pozwanej firmy kwoty głównej.</li>
+<li>Zasądzenie odsetek ustawowych za opóźnienie od wskazanego dnia do dnia zapłaty.</li>
+<li>Zasądzenie kosztów procesu według właściwych przepisów.</li>
+<li>Ewentualne dochodzenie uzasadnionych dodatkowych kosztów, jeśli istnieje podstawa prawna.</li>
+</ol>
+<p>Nie należy bezrefleksyjnie dodawać wszystkich kosztów korespondencji do kwoty głównej. Bezpieczniej rozdzielić poszczególne składniki i wskazać ich podstawę.</p>
+</section>
+
+<section id="porownanie">
+<h2>13. Czy e-sąd jest zawsze najlepszym rozwiązaniem?</h2>
+<p>Nie zawsze. Warto rozważyć zwykły sąd cywilny, jeżeli:</p>
+<ul>
+<li>firma kwestionuje sam fakt zawarcia umowy,</li>
+<li>spór dotyczy jakości wykonanej usługi,</li>
+<li>potrzebne są zeznania świadków lub opinie biegłych,</li>
+<li>roszczenie wymaga szczegółowej analizy dokumentów,</li>
+<li>istnieje ryzyko, że firma wniesie sprzeciw.</li>
+</ul>
+<p>EPU jest przede wszystkim uproszczoną drogą do uzyskania nakazu zapłaty, a nie gwarancją odzyskania pieniędzy.</p>
+<h3>Spór o jakość usługi — dlaczego e-sąd tu nie wystarczy?</h3>
+<p>Spór o jakość wykonanej usługi wymaga zwykle przeprowadzenia postępowania dowodowego. E-sąd nie jest do tego odpowiednio przystosowany. Ministerstwo Sprawiedliwości wskazuje, że EPU jest przeznaczone dla nieskomplikowanych roszczeń pieniężnych, które nie wymagają postępowania dowodowego.</p>
+<ul>
+<li>nie przeprowadza oględzin wykonanej usługi,</li>
+<li>nie przesłuchuje świadków,</li>
+<li>nie analizuje opinii biegłego w ramach postępowania dowodowego,</li>
+<li>nie rozstrzyga szczegółowo technicznych przyczyn wad.</li>
+</ul>
+<h3>Dlaczego zwykły sąd może być lepszy?</h3>
+<table>
+<tr><th>Dowód</th><th>Co może wykazać</th></tr>
+<tr><td>Umowa</td><td>Jaki był zakres usługi</td></tr>
+<tr><td>Zdjęcia i filmy</td><td>Jak wykonano usługę</td></tr>
+<tr><td>Korespondencja</td><td>Zastrzeżenia wobec firmy</td></tr>
+<tr><td>Reklamacje</td><td>Zgłoszenie wad</td></tr>
+<tr><td>Wezwania polecone</td><td>Próby rozwiązania sporu</td></tr>
+<tr><td>Opinia rzeczoznawcy</td><td>Zakres i przyczyny wad</td></tr>
+<tr><td>Zeznania świadków</td><td>Przebieg realizacji usługi</td></tr>
+<tr><td>Faktury za poprawki</td><td>Koszty usunięcia wad</td></tr>
+</table>
+<p>W razie potrzeby możesz również wnosić o powołanie biegłego sądowego. To istotne, ponieważ sąd może wtedy ustalić, czy usługa rzeczywiście była wadliwa i czy przysługuje Ci zwrot pieniędzy lub odszkodowanie.</p>
+<div class="box blue"><h4>Ważne: nie zawsze musisz żądać zwrotu całej kwoty</h4>
+<p>W zależności od rodzaju umowy i charakteru wad możesz mieć różne roszczenia, np.: obniżenie wynagrodzenia, zwrot części zapłaty, zwrot całości zapłaty (jeżeli istnieją ku temu podstawy), zwrot kosztów naprawy, odszkodowanie, odsetki za opóźnienie.</p>
+<p>Podstawa prawna zależy m.in. od tego, czy była to umowa o dzieło, umowa o świadczenie usług czy inny rodzaj umowy.</p></div>
+<h3>Porównanie w skrócie</h3>
+<table>
+<tr><th></th><th>e-Sąd (EPU)</th><th>Zwykły sąd cywilny</th></tr>
+<tr><td>Forma</td><td>W pełni elektroniczna</td><td>Zasadniczo pozew papierowy; elektronicznie tylko w szczególnych trybach / wyjątkach ustawowych, rozprawy</td></tr>
+<tr><td>Dowody</td><td>Tylko wykaz, bez załączników</td><td>Pełne dowody: dokumenty, zdjęcia, świadkowie, biegły</td></tr>
+<tr><td>Opłata — przykład 10 000 zł</td><td>125 zł</td><td>500 zł</td></tr>
+<tr><td>Opłata — powyżej 20 000 zł</td><td>1,25%</td><td>5%, nie więcej niż 100 000 zł (art. 13 ust. 2 ustawy o kosztach sądowych)</td></tr>
+<tr><td>Sprzeciw</td><td>Bezpłatny, nakaz traci moc, EPU umorzone, 3 mies. od wydania postanowienia o umorzeniu na nowy pozew</td><td>—</td></tr>
+<tr><td>Kiedy lepszy</td><td>Proste, bezsporne roszczenie pieniężne</td><td>Spór o jakość, umowę, dowody, świadków</td></tr>
+</table> <p><b>Uwaga:</b> niższa opłata w EPU nie oznacza automatycznie niższego całkowitego kosztu dochodzenia należności — przy sprzeciwie sprawa trafia do zwykłego postępowania, a koszty rosną (m.in. pełna opłata sądowa, dowody, ewentualny pełnomocnik).</p> <p class="small"><b>Uwaga o pozwie elektronicznym do zwykłego sądu:</b> od 1 marca 2026 r. Portal Informacyjny ma funkcję elektronicznego Biura Podawczego, ale dotyczy określonych pism i przede wszystkim profesjonalnych pełnomocników (np. apelacja, zażalenie, wniosek o posiedzenie zdalne) — zwykły pozew cywilny nie stał się przez to powszechnie dostępny do złożenia elektronicznie przez każdego obywatela. <b>Od 1 czerwca 2026 r. osoby fizyczne i przedsiębiorcy mogą natomiast złożyć oświadczenie o wyborze doręczeń elektronicznych przez Portal</b> — po jego złożeniu sąd doręcza im pisma elektronicznie; bez oświadczenia doręczenia z sądu nie przechodzą automatycznie na formę elektroniczną (patrz sekcja 4). Dlatego w tabeli wpisano: zasadniczo pozew papierowy, elektronicznie tylko w szczególnych trybach / wyjątkach ustawowych.</p>
+</section>
+
+<section>
+<h2>Checklista przed działaniem</h2>
+<ul>
+<li>☐ Mam ustaloną kwotę główną + kalkulację odsetek (9,25% / 13,75% handlowe w II półr. 2026) + osobno koszty.</li>
+<li>☐ Sprawdziłem dokładną datę wymagalności i termin przedawnienia. Roszczenia związane z działalnością gospodarczą przedawniają się zasadniczo po 3 latach, z końcem roku kalendarzowego, z uwzględnieniem przerw i zawieszeń biegu przedawnienia. Przykładowo roszczenia wymagalne w 2023 r. mogą zasadniczo przedawnić się 31.12.2026 r.</li>
+<li>☐ Mam umowę / zamówienie, faktury, przelewy, reklamację i odpowiedzi firmy w jednym folderze.</li>
+<li>☐ Wysłałem wezwanie — przez e-Doręczenia (do urzędu: 0 zł przez PURDE; do firmy: cena kwalifikowanej usługi RDE wg dostawcy kwalifikowanego) lub papierowym listem poleconym za potwierdzeniem odbioru — koszt według aktualnej taryfy Poczty Polskiej (11,80 zł to przykład historyczny z cennika 2025 r.) — z rozsądnym terminem, np. 7–14 dni (to praktyczna propozycja, nie uniwersalny wymóg prawny) i zachowałem dowód wysłania / dowód otrzymania. Uwaga: jeśli to Ty (a nie urząd) wysłałeś pismo do firmy przez e-Doręczenia i firma go nie otworzyła, możesz mieć tylko dowód wysłania — fikcja 14 dni nie działa, bo nadawcą nie jest podmiot publiczny. Sąd oceni, czy adresat mógł zapoznać się z treścią (art. 61 § 2 KC); nie czekaj na dowód otrzymania.</li>
+<li>☐ Sprawdziłem adres ADE firmy w CEIDG / KRS / na stronie urzędu.</li>
+<li>☐ Mam własny ADE i aktywną skrzynkę, jeśli chcę wysyłać przez e-Doręczenia. Firmowy ADE — osobno, jeśli mam JDG.</li>
+<li>☐ Zdecydowałem: EPU (prosta sprawa) czy zwykły sąd (spór o jakość / dowody).</li>
+<li>☐ W pozwie oddzieliłem kwotę główną od kosztów i odsetek.</li>
+<li>☐ Sprawdzam skrzynkę e-Doręczeń co najmniej raz na kilka dni — 14 dni i pismo OD PODMIOTU PUBLICZNEGO do Ciebie (podmiotu niepublicznego) jest doręczone, także gdy odbiorcą jest firma. Fikcja nie działa, gdy nadawcą jesteś Ty (osoba / firma), a nie urząd — ani gdy odbiorcą jest inny podmiot publiczny.</li>
+<li>☐ Pobrałem dowody z e-Doręczeń i e-Sądu — nie liczę, że system będzie moim archiwum.</li>
+</ul>
+</section>
+
+
+<section id="slowniczek">
+<h2>Słowniczek: BAE, PURDE, PUH, dostawca kwalifikowany</h2>
+<p>Pojęcia, które przewijają się przez cały poradnik — w jednym miejscu, na końcu, żeby nie przerywały czytania na początku.</p>
+<table>
+<tr><th>Pojęcie</th><th>Co to znaczy w praktyce</th></tr>
+<tr><td><b>BAE — Baza Adresów Elektronicznych</b></td><td>Publiczny rejestr prowadzony przez ministra właściwego ds. informatyzacji (Ministerstwo Cyfryzacji), który ewidencjonuje adresy do e-Doręczeń (ADE). To tu urząd / firma sprawdza, czy masz ADE. Trzy różne rzeczy: wpis do BAE (adres ewidencjonowany), widoczność w publicznej wyszukiwarce (nie każdy wpisany adres jest w niej publicznie wyszukiwalny) oraz uprawnienia do wyszukiwania ADE obywateli (wyłącznie podmioty publiczne). Adres prywatny znasz zwykle tylko wtedy, gdy ktoś Ci go sam poda.</td></tr>
+<tr><td><b>ADE — adres do doręczeń elektronicznych</b></td><td>Twój unikalny adres w systemie, np. <code>AE:PL-XXXXX-XXXXX-XXXXX-XX</code>. Jest wpisany do BAE i przypisany do Twojej skrzynki.</td></tr>
+<tr><td><b>PURDE — Publiczna Usługa Rejestrowanego Doręczenia Elektronicznego</b></td><td>Wysyłka w pełni elektroniczna, stosowana gdy <b>co najmniej jedna strona jest podmiotem publicznym</b>: nadawca → skrzynka odbiorcy w systemie. Jeśli odbiorca ma ADE — pismo trafia do skrzynki. Cena z cennika Poczty Polskiej <b>6,52 zł brutto (5,30 zł netto) dotyczy wysyłki OD podmiotu publicznego DO obywatela / firmy / ZZP</b> — płaci podmiot publiczny. Do podmiotu publicznego i między podmiotami publicznymi: <b>0 zł</b> (art. 52 ust. 2–3).</td></tr>
+<tr><td><b>Kwalifikowana usługa RDE — Kwalifikowana Usługa Rejestrowanego Doręczenia Elektronicznego</b></td><td>Komercyjna usługa rejestrowanego doręczenia elektronicznego świadczona przez kwalifikowanego dostawcę usług. Umożliwia korespondencję pomiędzy podmiotami niepublicznymi, a także z podmiotami publicznymi. W przypadku korespondencji kierowanej do podmiotu publicznego można korzystać również z bezpłatnej PURDE, jeżeli spełnione są warunki jej zastosowania. Stosowana zwłaszcza wtedy, gdy żadna ze stron nie jest podmiotem publicznym — firma → firma, firma → osoba prywatna, osoba → firma. U Poczty Polskiej to Q-Doręczenia, u innych dostawców ich własna usługa. <b>Cena zależy od dostawcy i jego taryfy — nie przyjmuj 6,52 zł.</b> <b>Uwaga o nazwie:</b> w ofertach i szkoleniach krąży skrót <b>KURDE</b>, ale w komunikacji resortu używa się nazwy „Kwalifikowana Usługa RDE”, a skrót KURDE nie jest nazwą urzędową — dlatego w tym poradniku używam nazwy ministerialnej.</td></tr>
+<tr><td><b>PUH — Publiczna Usługa Hybrydowa</b></td><td>Gdy odbiorca <b>nie ma</b> skrzynki: urząd wysyła elektronicznie, a Poczta Polska drukuje pismo i doręcza je papierowo jak list polecony. Cena: <b>10,27 zł brutto</b> (8,35 zł netto) — płaci nadawca, którym może być <b>wyłącznie podmiot publiczny (urząd)</b>, nie Ty jako odbiorca. Prywatna osoba ani firma nie może nadać PUH. Dlatego od 2026 r. nadal możesz dostać papier z urzędu — to właśnie PUH.</td></tr>
+<tr><td><b>Publiczny dostawca</b></td><td>Obecnie Poczta Polska. Założenie adresu i skrzynki jest bezpłatne, płacisz tylko za wysyłkę (PURDE/PUH). Uwaga: Poczta Polska jest jednocześnie operatorem wyznaczonym (PURDE / PUH) i kwalifikowanym dostawcą (Q-Doręczenia) — to różne usługi i różne cenniki, nie myl ich.</td></tr>
+<tr><td><b>Kwalifikowany dostawca</b></td><td>Podmiot wpisany na listę kwalifikowanych dostawców usług (KDU) — może to być firma prywatna (np. Autenti, Certum), ale też Poczta Polska S.A. (która jest jednocześnie operatorem wyznaczonym dla PURDE / PUH i dostawcą kwalifikowanym dla Q-Doręczeń) czy PWPW (eDO Post). Też daje adres wpisany do BAE, ale na warunkach komercyjnych — ceny mogą się różnić. Do wysyłki do firmy nie wystarczy sam publiczny PURDE — potrzebujesz kwalifikowanej usługi RDE tego dostawcy, wg jego cennika.</td></tr>
+</table>
+</section>
+
+<section id="poprawki">
+<h2>Najważniejsze liczby — co sprawdzić przed działaniem</h2>
+<p class="small">Aktualne są stawki PURDE / PUH v6.0, odsetki oraz pakiety Q-Doręczeń v2.1 (od 1.11.2026 r.). Stawki pocztowe z 2025 r. oraz pojedyncza przesyłka Q-Doręczeń z cennika z 2023 r. poniżej to tylko przykłady historyczne — nie traktuj ich jako cen aktualnych.</p>
+
+<div class="kpi">
+<div><b>14 dni</b>Fikcja doręczenia: tylko pisma OD podmiotu publicznego DO podmiotu niepublicznego (osoby lub firmy). Do innego podmiotu publicznego (urząd → urząd) doręczenie następuje z chwilą wpłynięcia pisma na jego ADE — bez fikcji 14 dni. Patrz sekcja 1.</div>
+<div><b>0 zł</b>Do podmiotu publicznego przez PURDE. Do firmy: cena kwalifikowanej usługi RDE wg dostawcy kwalifikowanego — nie 6,52 zł z automatu. 6,52 zł brutto to opłata pobierana od podmiotu publicznego za wysyłkę PURDE do obywatela, firmy lub ZZP. PUH: <b>10,27 zł</b>, płaci tylko podmiot publiczny.</div>
+<div><b>11,80 zł*</b>Przykład historyczny wyliczony z cennika obowiązującego od 1.03.2025 r.: polecony S ekonomiczny + ZPO (7,80 zł + 4,00 zł). *To nie jest potwierdzona cena na 2026 r.; przed nadaniem sprawdź aktualną taryfę.</div>
+<div><b>9,25%</b>Odsetki ustawowe za opóźnienie od 5.03.2026. Handlowe: 13,75% (II półr. 2026, 1.07.-31.12.2026).</div>
+</div>
+
+</section>
+
+</div></main>
+<footer><div class="wrap">
+<p><b>Źródła do weryfikacji (stan na 14.11.2026):</b> gov.pl — Elektroniczne postępowanie upominawcze (EPU), aktualizacja 30.07.2026; gov.pl — Uzyskaj adres do e-Doręczeń; gov.pl / biznes.gov.pl — e-Doręczenia dla przedsiębiorców; e-sad.gov.pl; ustawa z 18.11.2020 r. o doręczeniach elektronicznych (t.j. Dz.U. 2026 poz. 3), art. 42; ustawa z 28.07.2005 r. o kosztach sądowych w sprawach cywilnych, art. 13 i 19; Kodeks postępowania cywilnego, art. 98 i art. 505²⁸–505³⁷; Kodeks cywilny, art. 117–118, art. 117¹ § 1–2 (wyjątek słusznościowy przy przedawnieniu roszczeń przeciwko konsumentowi), 121, 123, 359, 455, 481; ustawa o przeciwdziałaniu nadmiernym opóźnieniom w transakcjach handlowych, art. 5–7, 9–10 (w tym rekompensata 40/70/100 EUR); Cennik usług powszechnych Poczty Polskiej (polecony S/M/L + ZPO 4,00 zł; cennik obowiązujący od 1.03.2025 r.; przed nadaniem sprawdź, czy nie opublikowano nowszej taryfy); Cennik PURDE 5,30 zł netto (6,52 zł brutto — wysyłka OD podmiotu publicznego DO niepublicznego) / PUH 8,35 zł netto (10,27 zł brutto) — Poczta Polska, obowiązuje od 05.10.2026, +23% VAT; wysyłka do firmy to kwalifikowana usługa RDE wg cennika dostawcy kwalifikowanego; ustawa o doręczeniach elektronicznych — art. 2 pkt 7 (PUH tylko podmiot publiczny), art. 40 (dowód wysłania / dowód otrzymania), art. 41 ust. 1–2 i art. 42 (kiedy dowód otrzymania), art. 44 (art. 41–42 stosuje się odpowiednio do kwalifikowanej usługi RDE; fikcja 14 dni tylko w relacji podmiot publiczny → podmiot niepubliczny), art. 52 ust. 2–3 (0 zł do / między podmiotami publicznymi), art. 147 ust. 1 (ePUAP między podmiotami publicznymi do 30.09.2029), art. 155 ust. 5a (służby / obrona od 31.12.2026), art. 155 ust. 7 (sądy / komornicy od 1.10.2029); KPC — art. 505³³ (brak podstaw do nakazu = umorzenie EPU, brak automatycznego przekazania), art. 505³⁵ (sprzeciw 2 tygodnie), art. 505³⁷ § 2 (3 miesiące od wydania postanowienia — skutki zastosowania przepisu zależą od spełnienia przesłanek; nie należy traktować go jako automatycznego sposobu naprawienia niedopuszczalnego pozwu EPU); KC — art. 61 § 2 (oświadczenie elektroniczne), art. 121 pkt 5–6 (zawieszenie biegu przedawnienia podczas mediacji i postępowania pojednawczego), art. 123 § 1 pkt 1–2 (przerwanie biegu przedawnienia: czynność przed sądem lub innym właściwym organem, uznanie roszczenia), art. 115 (termin kończący się w sobotę lub święto), art. 125 § 1 (6 lat; przyszłe świadczenia okresowe 3 lata), art. 455 (brak oznaczonego terminu — po wezwaniu), art. 481 § 1–2² (odsetki ustawowe i umowne z limitem maksymalnym); KPC — art. 505²⁹ᵃ (3 lata do EPU); ustawa o kosztach komorniczych — art. 28 (minima 150 / 200 / 300 zł), art. 29 ust. 5 (zwolnienia z 150 zł: pkt 1, pkt 2, pkt 3 — wg uzasadnienia III CZP 30/24 przepis nie ogranicza się wyłącznie do podmiotów prowadzących działalność gospodarczą; sentencja dotyczyła ZUS, zastosowanie do innych wierzycieli wymaga oceny przesłanek konkretnej sprawy); Obwieszczenie Ministra Sprawiedliwości z 8.04.2026 — odsetki za opóźnienie 9,25% od 5.03.2026; Obwieszczenie Ministra Finansów i Gospodarki z 22.06.2026 — odsetki handlowe 13,75% / 11,75% w II półroczu 2026; Ustawa o kosztach komorniczych — art. 3, 4, 7, 8, 9, 16, 21, 25, 27–30, 44, 45; uchwała SN III CZP 30/24 z 15.01.2025 (SN wskazał, że art. 29 ust. 5 pkt 3 nie jest ograniczony wyłącznie do podmiotów prowadzących działalność gospodarczą; sentencja dotyczyła ZUS, a zastosowanie do innych wierzycieli wymaga oceny przesłanek konkretnej sprawy); Cennik kwalifikowanej usługi RDE Poczty Polskiej — pojedyncze przekazanie 2,20 zł brutto (cennik obowiązuje od 23.01.2023 r. — przykład historyczny, aktualna taryfa pojedynczych przesyłek do potwierdzenia przed wysyłką), <a href="https://bip.poczta-polska.pl/cennik-pakietow-kwalifikowanej-uslugi-rde/">cennik pakietów kwalifikowanej usługi RDE Poczty Polskiej v2.1</a> obowiązujący od 1.11.2026 do 30.06.2027 (pakiety: 3 sztuki — 2,20 zł; 10 — 20,79 zł; 20 — 39,11 zł; 50 — 86,10 zł brutto za miesiąc; niewykorzystane przesyłki przechodzą na kolejny okres); Cennik PURDE i PUH v.6.0 obowiązujący od 05.10.2026 r.; Cennik usług powszechnych obowiązujący od 01.03.2025 r. — stawki z tego cennika, przed nadaniem sprawdź aktualną taryfę; komunikat Ministerstwa Sprawiedliwości o Portalu Informacyjnym (doręczenia elektroniczne dla osób fizycznych i przedsiębiorców od 1.06.2026 r. po złożeniu oświadczenia); FAQ e-Doręczenia gov.pl — wyszukiwanie ADE obywateli w BAE tylko przez podmioty publiczne; FAQ e-Doręczenia gov.pl — obywatel bez ADE, ePUAP, bezpłatna korespondencja do podmiotów publicznych; Kodeks postępowania cywilnego — art. 767, 799, 824.</p>
+<p><b>Akty prawne — bezpośrednie odnośniki:</b> <a href="https://eli.gov.pl/api/acts/DU/2020/2320/text/T/D20202320L.pdf">ustawa z 18.11.2020 r. o doręczeniach elektronicznych</a> (tekst pierwotny; tekst jednolity: Dz.U. 2026 poz. 3); <a href="https://eli.gov.pl/api/acts/DU/2022/893/text/U/D20220893Lj.pdf">ustawa z 8.03.2013 r. o przeciwdziałaniu nadmiernym opóźnieniom w transakcjach handlowych</a> (art. 2 — zakres, art. 4 pkt 3 — odsetki); <a href="https://eli.gov.pl/eli/MP/2026/642/ogl/pol/pdf">obwieszczenie o odsetkach handlowych 13,75% / 11,75% od 1.07. do 31.12.2026 r.</a>; <a href="https://www.gov.pl/web/e-doreczenia/pytania-i-odpowiedzi">FAQ e-Doręczenia gov.pl</a> (m.in. wyszukiwanie ADE w BAE, obywatel bez ADE).</p> <p>Cenniki pocztowe, sądowe i stawki odsetek mogą się zmieniać — przed wysłaniem pisma lub pozwu sprawdź aktualny cennik Poczty Polskiej, kalkulator opłat Ministerstwa Sprawiedliwości i informacje na gov.pl. W razie wątpliwości co do przedawnienia, podstawy roszczenia lub klauzuli — skonsultuj się z prawnikiem.</p>
+</div></footer>
+</body></html>
